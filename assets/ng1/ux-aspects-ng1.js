@@ -332,17 +332,7 @@ angular.module("ux-aspects.applicationSwitcher", []).directive("applicationSwitc
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__backButton_directive_js__ = __webpack_require__(128);
-
-
-angular.module('ux-aspects.backButton', []).directive('backButton', __WEBPACK_IMPORTED_MODULE_0__backButton_directive_js__["a" /* default */]);
-
-/***/ }),
-/* 27 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__backButtonHeader_directive_js__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__backButtonHeader_directive_js__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__external_angular_ui_router_angular_ui_router_js__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__external_angular_ui_router_angular_ui_router_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__external_angular_ui_router_angular_ui_router_js__);
 
@@ -350,6 +340,16 @@ angular.module('ux-aspects.backButton', []).directive('backButton', __WEBPACK_IM
 
 
 angular.module("ux-aspects.backButtonHeader", ['ui.router']).directive('backButtonHeader', __WEBPACK_IMPORTED_MODULE_0__backButtonHeader_directive_js__["a" /* default */]);
+
+/***/ }),
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__backButton_directive_js__ = __webpack_require__(129);
+
+
+angular.module('ux-aspects.backButton', []).directive('backButton', __WEBPACK_IMPORTED_MODULE_0__backButton_directive_js__["a" /* default */]);
 
 /***/ }),
 /* 28 */
@@ -391,10 +391,10 @@ angular.module('ux-aspects.checkbox', ['ux-aspects.keyboardService']).directive(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__componentList_directive_js__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__componentList_controller_js__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_component_directive_js__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_component_controller_js__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__componentList_directive_js__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__componentList_controller_js__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__component_component_directive_js__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__component_component_controller_js__ = __webpack_require__(137);
 
 
 
@@ -459,8 +459,8 @@ angular.module("ux-aspects.dateTimePicker", []).directive('dateTimePicker', __WE
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__displayPanel_service_js__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__displayPanel_displayPanel_directive_js__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__displayPanelItem_displayPanelItem_directive_js__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__displayPanel_displayPanel_directive_js__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__displayPanelItem_displayPanelItem_directive_js__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_keyboardService_keyboardService_module_js__ = __webpack_require__(2);
 
 
@@ -592,19 +592,19 @@ angular.module("ux-aspects.extendedCheckboxHit", []).directive('extendedCheckbox
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facet_facet_directive_js__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facet_facet_controller_js__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facetContainer_facetContainer_directive_js__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__facetContainer_facetContainer_controller_js__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__facetCustom_facetCustom_directive_js__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__facetCustom_facetCustom_controller_js__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__facetDynamic_facetDynamic_directive_js__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__facetDynamic_facetDynamic_controller_js__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__facetDynamic_facetSelected_filter_js__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__facetDynamic_facetVisible_filter_js__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__facetOption_facetOption_directive_js__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__facetOption_dynamicFacetOptions_directive_js__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__facetOption_facetOption_controller_js__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__facet_facet_directive_js__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__facet_facet_controller_js__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__facetContainer_facetContainer_directive_js__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__facetContainer_facetContainer_controller_js__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__facetCustom_facetCustom_directive_js__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__facetCustom_facetCustom_controller_js__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__facetDynamic_facetDynamic_directive_js__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__facetDynamic_facetDynamic_controller_js__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__facetDynamic_facetSelected_filter_js__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__facetDynamic_facetVisible_filter_js__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__facetOption_facetOption_directive_js__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__facetOption_dynamicFacetOptions_directive_js__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__facetOption_facetOption_controller_js__ = __webpack_require__(176);
 
 
 
@@ -630,12 +630,12 @@ angular.module("ux-aspects.facets", []).directive("facet", __WEBPACK_IMPORTED_MO
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__filter_filter_directive_js__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__filter_filter_controller_js__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__filterContainer_filterContainer_directive_js__ = __webpack_require__(183);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__filterContainer_filterContainer_controller_js__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__filterOption_filterOption_directive_js__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__filterOption_filterOption_controller_js__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__filter_filter_directive_js__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__filter_filter_controller_js__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__filterContainer_filterContainer_directive_js__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__filterContainer_filterContainer_controller_js__ = __webpack_require__(180);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__filterOption_filterOption_directive_js__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__filterOption_filterOption_controller_js__ = __webpack_require__(182);
 
 
 
@@ -720,8 +720,8 @@ angular.module("ux-aspects.forceFocus", []).directive('forceFocus', __WEBPACK_IM
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__grid_directive_js__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__grid_controller_js__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__grid_gridCell_directive_js__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gridPlugins_service_js__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__grid_gridCell_directive_js__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gridPlugins_service_js__ = __webpack_require__(197);
 
 
 
@@ -1089,13 +1089,13 @@ angular.module('ux-aspects.updatingLinechart', []).directive('updatingLinechart'
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__previewPane_provider_js__ = __webpack_require__(257);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__previewPane_previewPane_directive_js__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__previewPane_previewPane_controller_js__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__previewPaneItem_previewPaneItem_directive_js__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__previewPaneItem_previewPaneItem_controller_js__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__previewPaneToggle_previewPaneToggle_directive_js__ = __webpack_require__(263);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__previewPaneToggle_previewPaneToggle_controller_js__ = __webpack_require__(262);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__previewPaneWindow_previewPaneWindow_directive_js__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__previewPane_previewPane_directive_js__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__previewPane_previewPane_controller_js__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__previewPaneItem_previewPaneItem_directive_js__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__previewPaneItem_previewPaneItem_controller_js__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__previewPaneToggle_previewPaneToggle_directive_js__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__previewPaneToggle_previewPaneToggle_controller_js__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__previewPaneWindow_previewPaneWindow_directive_js__ = __webpack_require__(262);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_windowCommunicationService_windowCommunication_module_js__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_keyboardService_keyboardService_module_js__ = __webpack_require__(2);
 
@@ -1286,24 +1286,24 @@ angular.module('ux-aspects.sideNavigation', []).directive("sideNavigation", __WE
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__slider_directive_js__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__slider_controller_js__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sliderChart_directive_js__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sliderChart_controller_js__ = __webpack_require__(289);
 
 
 
-angular.module('ux-aspects.slider', []).directive('slider', __WEBPACK_IMPORTED_MODULE_0__slider_directive_js__["a" /* default */]).controller("SliderCtrl", __WEBPACK_IMPORTED_MODULE_1__slider_controller_js__["a" /* default */]);
+angular.module('ux-aspects.sliderChart', []).directive('sliderChart', __WEBPACK_IMPORTED_MODULE_0__sliderChart_directive_js__["a" /* default */]).controller("SliderChartCtrl", __WEBPACK_IMPORTED_MODULE_1__sliderChart_controller_js__["a" /* default */]);
 
 /***/ }),
 /* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__sliderChart_directive_js__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sliderChart_controller_js__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__slider_directive_js__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__slider_controller_js__ = __webpack_require__(291);
 
 
 
-angular.module('ux-aspects.sliderChart', []).directive('sliderChart', __WEBPACK_IMPORTED_MODULE_0__sliderChart_directive_js__["a" /* default */]).controller("SliderChartCtrl", __WEBPACK_IMPORTED_MODULE_1__sliderChart_controller_js__["a" /* default */]);
+angular.module('ux-aspects.slider', []).directive('slider', __WEBPACK_IMPORTED_MODULE_0__slider_directive_js__["a" /* default */]).controller("SliderCtrl", __WEBPACK_IMPORTED_MODULE_1__slider_controller_js__["a" /* default */]);
 
 /***/ }),
 /* 91 */
@@ -1363,12 +1363,12 @@ angular.module("ux-aspects.socialChart", ['ux-aspects.safeTimeout', 'ux-aspects.
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__multiSortableHeader_multiSortableHeader_controller_js__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__sortDirectionToggle_sortDirectionToggle_directive_js__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__sortDirectionToggle_sortDirectionToggle_controller_js__ = __webpack_require__(300);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__sorter_sorter_directive_js__ = __webpack_require__(303);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sorter_sorter_controller_js__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__sorterHeader_sortableHeader_directive_js__ = __webpack_require__(305);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__sorterHeader_sortableHeader_controller_js__ = __webpack_require__(304);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__sorterOption_sorterOption_directive_js__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__sorterOption_sorterOption_controller_js__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__sorter_sorter_directive_js__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sorter_sorter_controller_js__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__sorterHeader_sortableHeader_directive_js__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__sorterHeader_sortableHeader_controller_js__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__sorterOption_sorterOption_directive_js__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__sorterOption_sorterOption_controller_js__ = __webpack_require__(304);
 
 
 
@@ -2095,14 +2095,21 @@ function applicationSwitcherItem() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = backButton;
-function backButton() {
+/* harmony export (immutable) */ __webpack_exports__["a"] = backButtonHeader;
+backButtonHeader.$inject = ["$state"];
+
+function backButtonHeader($state) {
     return {
         restrict: 'E',
         template: __webpack_require__(366),
         replace: true,
         scope: {
-            ariaLabel: '@'
+            targetState: "="
+        },
+        link: function link(scope, element) {
+            element.on('click', function () {
+                $state.go(scope.targetState);
+            });
         }
     };
 }
@@ -2112,21 +2119,14 @@ function backButton() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = backButtonHeader;
-backButtonHeader.$inject = ["$state"];
-
-function backButtonHeader($state) {
+/* harmony export (immutable) */ __webpack_exports__["a"] = backButton;
+function backButton() {
     return {
         restrict: 'E',
         template: __webpack_require__(367),
         replace: true,
         scope: {
-            targetState: "="
-        },
-        link: function link(scope, element) {
-            element.on('click', function () {
-                $state.go(scope.targetState);
-            });
+            ariaLabel: '@'
         }
     };
 }
@@ -2480,94 +2480,6 @@ function checkbox() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = ComponentCtrl;
-ComponentCtrl.$inject = ['$scope'];
-
-function ComponentCtrl($scope) {
-    var vm = this;
-
-    var KEYS = {
-        ENTER: 13
-    };
-
-    // get the parent controller
-    vm.componentListCtrl = $scope.$parent.vm;
-
-    // store the state of the remove button
-    vm.removingDisabled = vm.componentListCtrl.removingDisabled;
-
-    // remove this field
-    vm.removeField = function () {
-        vm.componentListCtrl.removeField($scope.$parent.$index);
-    };
-
-    vm.keyDown = function (event) {
-        if (event.keyCode !== KEYS.ENTER) {
-            return;
-        }
-
-        // determine if this is the last item in the list
-        if ($scope.$parent.$last) {
-            vm.componentListCtrl.addField();
-        }
-    };
-
-    $scope.$watch('vm.componentListCtrl.removingDisabled', function (value) {
-        vm.removingDisabled = value;
-    });
-}
-
-/***/ }),
-/* 136 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = component;
-function component() {
-  return {
-    restrict: 'E',
-    require: '^^componentList',
-    transclude: true,
-    template: __webpack_require__(370),
-    controller: 'ComponentCtrl as vm',
-    link: function link(scope, element, attrs, ctrl, transclude) {
-
-      // find the destination for the transcluded content
-      var container = element.find('.component-content');
-
-      // perform transclusion
-      transclude(function (content, childScope) {
-
-        // get initial value
-        childScope.model = ctrl.components[scope.$parent.$index];
-
-        // store child scope
-        scope.vm.childScope = childScope;
-
-        // add element to container
-        container.append(content);
-
-        // update the model in the parent container
-        childScope.$watch('model', function (newValue) {
-          ctrl.components[scope.$parent.$index] = newValue;
-        });
-
-        // ensure the model gets update if the value in the parent changes
-        scope.$watch('$parent.component', function () {
-          if (childScope.model !== scope.$parent.component) {
-            childScope.model = scope.$parent.component;
-          }
-        }, true);
-      });
-    }
-  };
-}
-
-/***/ }),
-/* 137 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = ComponentListCtrl;
 ComponentListCtrl.$inject = ['$scope'];
 
@@ -2652,7 +2564,7 @@ function ComponentListCtrl($scope) {
 }
 
 /***/ }),
-/* 138 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2660,7 +2572,7 @@ function ComponentListCtrl($scope) {
 function componentList() {
     return {
         restrict: 'E',
-        template: __webpack_require__(371),
+        template: __webpack_require__(370),
         transclude: true,
         controller: 'ComponentListCtrl as vm',
         bindToController: true,
@@ -2673,6 +2585,94 @@ function componentList() {
             onRemove: '=?'
         }
     };
+}
+
+/***/ }),
+/* 137 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = ComponentCtrl;
+ComponentCtrl.$inject = ['$scope'];
+
+function ComponentCtrl($scope) {
+    var vm = this;
+
+    var KEYS = {
+        ENTER: 13
+    };
+
+    // get the parent controller
+    vm.componentListCtrl = $scope.$parent.vm;
+
+    // store the state of the remove button
+    vm.removingDisabled = vm.componentListCtrl.removingDisabled;
+
+    // remove this field
+    vm.removeField = function () {
+        vm.componentListCtrl.removeField($scope.$parent.$index);
+    };
+
+    vm.keyDown = function (event) {
+        if (event.keyCode !== KEYS.ENTER) {
+            return;
+        }
+
+        // determine if this is the last item in the list
+        if ($scope.$parent.$last) {
+            vm.componentListCtrl.addField();
+        }
+    };
+
+    $scope.$watch('vm.componentListCtrl.removingDisabled', function (value) {
+        vm.removingDisabled = value;
+    });
+}
+
+/***/ }),
+/* 138 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = component;
+function component() {
+  return {
+    restrict: 'E',
+    require: '^^componentList',
+    transclude: true,
+    template: __webpack_require__(371),
+    controller: 'ComponentCtrl as vm',
+    link: function link(scope, element, attrs, ctrl, transclude) {
+
+      // find the destination for the transcluded content
+      var container = element.find('.component-content');
+
+      // perform transclusion
+      transclude(function (content, childScope) {
+
+        // get initial value
+        childScope.model = ctrl.components[scope.$parent.$index];
+
+        // store child scope
+        scope.vm.childScope = childScope;
+
+        // add element to container
+        container.append(content);
+
+        // update the model in the parent container
+        childScope.$watch('model', function (newValue) {
+          ctrl.components[scope.$parent.$index] = newValue;
+        });
+
+        // ensure the model gets update if the value in the parent changes
+        scope.$watch('$parent.component', function () {
+          if (childScope.model !== scope.$parent.component) {
+            childScope.model = scope.$parent.component;
+          }
+        }, true);
+      });
+    }
+  };
 }
 
 /***/ }),
@@ -3819,6 +3819,158 @@ function $displayPanel($compile, $timeout, $document) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = displayPanelItem;
+displayPanelItem.$inject = ["$displayPanel", "keyboardService", "$timeout"];
+
+function displayPanelItem($displayPanel, keyboardService, $timeout) {
+  return {
+    restrict: 'A',
+    scope: true,
+    link: function link(scope, element, attrs) {
+      scope.displayPanelItem = scope.$eval(attrs.displayPanelItem);
+      scope.shadow = scope.$eval(attrs.shadow);
+
+      var showDisplayPanel = function showDisplayPanel() {
+        var previous = element.is(':first-child') ? true : false;
+        var next = element.is(':last-child') ? true : false;
+
+        $displayPanel.open(element, scope.displayPanelItem, scope.shadow, previous, next);
+      };
+
+      var hideDisplayPanel = function hideDisplayPanel() {
+        $displayPanel.close(scope.displayPanelItem);
+      };
+
+      //update the panel if it visible
+      var updatePanel = function updatePanel() {
+        if ($displayPanel.panelOpen() && !$displayPanel.panelHidden()) {
+          $timeout(function () {
+            showDisplayPanel();
+          });
+        }
+      };
+
+      //listen for click
+      element[0].addEventListener("click", function () {
+        $timeout(function () {
+          showDisplayPanel();
+        });
+      });
+
+      //listen for focus
+      element[0].addEventListener("focus", updatePanel);
+
+      // down key press - go to next item
+      keyboardService.keydown(element, 40, function (evt) {
+        evt.preventDefault();
+        goToNext();
+      });
+
+      // this will be the item we are focusing on
+      var goToItem = element;
+
+      // up keypress - go to previous item
+      keyboardService.keydown(element, 38, function (evt) {
+        evt.preventDefault();
+        goToPrevious();
+      });
+
+      //go to previous item in the list
+      function goToPrevious() {
+        goToItem = element.prev('[display-panel-item]');
+        goToItem.focus();
+      }
+
+      // down key press - go to next item
+      keyboardService.keydown(element, 40, function (evt) {
+        evt.preventDefault();
+        goToNext();
+      });
+
+      //go to next item in the list
+      function goToNext() {
+        goToItem = element.next('[display-panel-item]');
+        goToItem.focus();
+      }
+
+      // when clicking Previous button go to previous item
+      scope.$on('$displayPanelPrevious', function () {
+        if ($displayPanel.getCurrentPanel() === element) {
+          goToPrevious();
+        }
+      });
+
+      // when clicking Next button go to next item
+      scope.$on('$displayPanelNext', function () {
+        if ($displayPanel.getCurrentPanel() === element) {
+          goToNext();
+        }
+      });
+
+      // pg up key press - go to 10th previous item or 1st item if not possible
+      keyboardService.keydown(element, 33, function (evt) {
+        evt.preventDefault();
+        var itemToJumpTo = element.prevAll('[display-panel-item]');
+        if (itemToJumpTo.length) {
+          goToItem = element.prevAll('[display-panel-item]:eq(10)').length ? element.prevAll('[display-panel-item]:eq(10)') : itemToJumpTo[itemToJumpTo.length - 1];
+          goToItem.focus();
+        }
+      });
+
+      // pg down key press - go to 10th next item or last item if not possible
+      keyboardService.keydown(element, 34, function (evt) {
+        evt.preventDefault();
+        var itemToJumpTo = element.nextAll('[display-panel-item]');
+        if (itemToJumpTo.length) {
+          goToItem = element.nextAll('[display-panel-item]:eq(10)').length ? element.nextAll('[display-panel-item]:eq(10)') : itemToJumpTo[itemToJumpTo.length - 1];
+          goToItem.focus();
+        }
+      });
+
+      // home key press - go to the first item
+      keyboardService.keydown(element, 36, function (evt) {
+        evt.preventDefault();
+        goToItem = element.prevAll('[display-panel-item]:last');
+        goToItem.focus();
+      });
+
+      // end key press - go to the last item
+      keyboardService.keydown(element, 35, function (evt) {
+        evt.preventDefault();
+        goToItem = element.nextAll('[display-panel-item]:last');
+        goToItem.focus();
+      });
+
+      // esc key press - if display panel is open, close it. Otherwise blur focus on item
+      keyboardService.keydown(element, 27, function (evt) {
+        evt.preventDefault();
+        if ($displayPanel.panelOpen() && !$displayPanel.panelHidden()) {
+          hideDisplayPanel();
+        } else {
+          element.blur();
+        }
+      });
+
+      // enter key press - show the display panel 
+      keyboardService.keydown(element, 13, function () {
+        $timeout(function () {
+          showDisplayPanel();
+        });
+      });
+
+      // spacebar press - show the display panel 
+      keyboardService.keydown(element, 32, function (evt) {
+        evt.preventDefault();
+      });
+    }
+  };
+}
+
+/***/ }),
+/* 151 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = displayPanel;
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -4027,158 +4179,6 @@ var AffixDisplayPanel = function () {
 
     return AffixDisplayPanel;
 }();
-
-/***/ }),
-/* 151 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = displayPanelItem;
-displayPanelItem.$inject = ["$displayPanel", "keyboardService", "$timeout"];
-
-function displayPanelItem($displayPanel, keyboardService, $timeout) {
-  return {
-    restrict: 'A',
-    scope: true,
-    link: function link(scope, element, attrs) {
-      scope.displayPanelItem = scope.$eval(attrs.displayPanelItem);
-      scope.shadow = scope.$eval(attrs.shadow);
-
-      var showDisplayPanel = function showDisplayPanel() {
-        var previous = element.is(':first-child') ? true : false;
-        var next = element.is(':last-child') ? true : false;
-
-        $displayPanel.open(element, scope.displayPanelItem, scope.shadow, previous, next);
-      };
-
-      var hideDisplayPanel = function hideDisplayPanel() {
-        $displayPanel.close(scope.displayPanelItem);
-      };
-
-      //update the panel if it visible
-      var updatePanel = function updatePanel() {
-        if ($displayPanel.panelOpen() && !$displayPanel.panelHidden()) {
-          $timeout(function () {
-            showDisplayPanel();
-          });
-        }
-      };
-
-      //listen for click
-      element[0].addEventListener("click", function () {
-        $timeout(function () {
-          showDisplayPanel();
-        });
-      });
-
-      //listen for focus
-      element[0].addEventListener("focus", updatePanel);
-
-      // down key press - go to next item
-      keyboardService.keydown(element, 40, function (evt) {
-        evt.preventDefault();
-        goToNext();
-      });
-
-      // this will be the item we are focusing on
-      var goToItem = element;
-
-      // up keypress - go to previous item
-      keyboardService.keydown(element, 38, function (evt) {
-        evt.preventDefault();
-        goToPrevious();
-      });
-
-      //go to previous item in the list
-      function goToPrevious() {
-        goToItem = element.prev('[display-panel-item]');
-        goToItem.focus();
-      }
-
-      // down key press - go to next item
-      keyboardService.keydown(element, 40, function (evt) {
-        evt.preventDefault();
-        goToNext();
-      });
-
-      //go to next item in the list
-      function goToNext() {
-        goToItem = element.next('[display-panel-item]');
-        goToItem.focus();
-      }
-
-      // when clicking Previous button go to previous item
-      scope.$on('$displayPanelPrevious', function () {
-        if ($displayPanel.getCurrentPanel() === element) {
-          goToPrevious();
-        }
-      });
-
-      // when clicking Next button go to next item
-      scope.$on('$displayPanelNext', function () {
-        if ($displayPanel.getCurrentPanel() === element) {
-          goToNext();
-        }
-      });
-
-      // pg up key press - go to 10th previous item or 1st item if not possible
-      keyboardService.keydown(element, 33, function (evt) {
-        evt.preventDefault();
-        var itemToJumpTo = element.prevAll('[display-panel-item]');
-        if (itemToJumpTo.length) {
-          goToItem = element.prevAll('[display-panel-item]:eq(10)').length ? element.prevAll('[display-panel-item]:eq(10)') : itemToJumpTo[itemToJumpTo.length - 1];
-          goToItem.focus();
-        }
-      });
-
-      // pg down key press - go to 10th next item or last item if not possible
-      keyboardService.keydown(element, 34, function (evt) {
-        evt.preventDefault();
-        var itemToJumpTo = element.nextAll('[display-panel-item]');
-        if (itemToJumpTo.length) {
-          goToItem = element.nextAll('[display-panel-item]:eq(10)').length ? element.nextAll('[display-panel-item]:eq(10)') : itemToJumpTo[itemToJumpTo.length - 1];
-          goToItem.focus();
-        }
-      });
-
-      // home key press - go to the first item
-      keyboardService.keydown(element, 36, function (evt) {
-        evt.preventDefault();
-        goToItem = element.prevAll('[display-panel-item]:last');
-        goToItem.focus();
-      });
-
-      // end key press - go to the last item
-      keyboardService.keydown(element, 35, function (evt) {
-        evt.preventDefault();
-        goToItem = element.nextAll('[display-panel-item]:last');
-        goToItem.focus();
-      });
-
-      // esc key press - if display panel is open, close it. Otherwise blur focus on item
-      keyboardService.keydown(element, 27, function (evt) {
-        evt.preventDefault();
-        if ($displayPanel.panelOpen() && !$displayPanel.panelHidden()) {
-          hideDisplayPanel();
-        } else {
-          element.blur();
-        }
-      });
-
-      // enter key press - show the display panel 
-      keyboardService.keydown(element, 13, function () {
-        $timeout(function () {
-          showDisplayPanel();
-        });
-      });
-
-      // spacebar press - show the display panel 
-      keyboardService.keydown(element, 32, function (evt) {
-        evt.preventDefault();
-      });
-    }
-  };
-}
 
 /***/ }),
 /* 152 */
@@ -5871,155 +5871,6 @@ function extendedCheckboxHit() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = FacetCtrl;
-FacetCtrl.$inject = ['$scope'];
-
-function FacetCtrl($scope) {
-  var vm = this;
-  vm.name = $scope.name;
-  vm.expanded = true;
-  vm.scrollConfig = {
-    autoReinitialise: true,
-    showOnlyOnHover: true,
-    enableKeyboardNavigation: true
-  };
-  vm.toggleExpand = function ($event) {
-    vm.expanded = !vm.expanded;
-    $event.currentTarget.blur();
-  };
-  vm.toggleExpandKey = function ($event) {
-    if ($event.keyCode === 13) {
-      vm.expanded = !vm.expanded;
-      $event.preventDefault();
-    }
-  };
-}
-
-FacetCtrl.prototype.register = function (fo) {
-  if (!this.options) {
-    this.options = [];
-  }
-  this.options.push(fo);
-};
-
-/***/ }),
-/* 168 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = facet;
-facet.$inject = ["$rootScope", "$timeout"];
-
-function facet($rootScope, $timeout) {
-  return {
-    restrict: "E",
-    template: __webpack_require__(382),
-    transclude: true,
-    replace: true,
-    controller: "FacetCtrl as fac",
-    scope: {
-      name: "=",
-      facetScroll: "@",
-      loadDelay: "=?"
-    },
-    link: {
-      pre: FacetDirectiveLinkFn
-    }
-  };
-
-  function FacetDirectiveLinkFn(scope, element) {
-
-    scope.enableScroll = scope.facetScroll !== "off";
-
-    var facetScrollContainer = [];
-    var paneMaxHeight = null;
-
-    $timeout(function () {
-      // Check when ng-if has been resolved.
-      facetScrollContainer = element.find('.facet-scroll');
-      if (facetScrollContainer.length > 0) {
-        //give the scroll container a unique id
-        facetScrollContainer.uniqueId();
-
-        scope.uniqueId = facetScrollContainer.attr('id');
-
-        paneMaxHeight = getMaxHeight(facetScrollContainer);
-
-        if (!(scope.loadDelay === undefined || scope.loadDelay <= 0)) {
-          $timeout(reinitialize, scope.loadDelay);
-        }
-        scope.$watch('fac.expanded', function () {
-          //this is done to re-initialise the custom scrollbar on facets
-          $timeout(reinitialize, 100);
-        });
-        // Event to allow reinitialise to be triggered externally
-        scope.$on("facet-reinitialise", function () {
-          $timeout(reinitialize, 100);
-        });
-      }
-    });
-
-    scope.fac.reinitialize = function () {
-      return reinitialize;
-    }();
-
-    function reinitialize() {
-      if (facetScrollContainer.length > 0) {
-        var jsp = facetScrollContainer.data("jsp");
-        if (jsp) {
-          jsp.reinitialise();
-
-          // Since jspContainer does not shrink correctly after reinitialize I have taken the fix from this bug:
-          // https://github.com/vitch/jScrollPane/issues/143
-          resizeJsp(element, paneMaxHeight);
-        }
-      }
-    }
-
-    function getMaxHeight(elem) {
-      var maxHeight = elem.css("max-height");
-      if (maxHeight.indexOf("px") !== -1) {
-        maxHeight = parseFloat(maxHeight);
-        if (isNaN(maxHeight)) {
-          maxHeight = null;
-        }
-      } else {
-        maxHeight = null;
-      }
-      return maxHeight;
-    }
-
-    function resizeJsp(parentElem, paneMaxHeight) {
-      var pane = parentElem.find(".jspPane");
-      var container = parentElem.find(".jspContainer");
-
-      var paneHeight = parentElem.innerHeight();
-
-      // If pane is shorter than the maximum allowed height, grow the container
-      if (paneMaxHeight !== null) {
-        if (paneHeight < paneMaxHeight) {
-          paneHeight = paneMaxHeight;
-          container.css({
-            height: paneMaxHeight + 'px'
-          });
-        }
-      }
-
-      // If the content has reduced in height, shrink the container
-      if (pane.outerHeight() < paneHeight) {
-        container.css({
-          height: pane.outerHeight() + 'px'
-        });
-      }
-    }
-  }
-}
-
-/***/ }),
-/* 169 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = FacetContainerCtrl;
 FacetContainerCtrl.$inject = ['$scope', "previewPaneProvider"];
 
@@ -6187,7 +6038,7 @@ FacetContainerCtrl.prototype.clearAll = function () {
 };
 
 /***/ }),
-/* 170 */
+/* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6196,7 +6047,7 @@ function facetContainer() {
   return {
     restrict: "E",
     controller: "FacetContainerCtrl as fc",
-    template: __webpack_require__(383),
+    template: __webpack_require__(382),
     scope: {
       selectTitle: "@",
       clearText: "@",
@@ -6214,7 +6065,7 @@ function facetContainer() {
 }
 
 /***/ }),
-/* 171 */
+/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6257,7 +6108,7 @@ FacetCustomCtrl.prototype.register = function (fo) {
 };
 
 /***/ }),
-/* 172 */
+/* 170 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6268,7 +6119,7 @@ function facetCustom($controller, previewPaneProvider) {
   return {
     restrict: "E",
     require: ['^facetContainer'],
-    template: __webpack_require__(384),
+    template: __webpack_require__(383),
     transclude: true,
     replace: true,
     controller: "FacetCustomCtrl as fac",
@@ -6298,7 +6149,7 @@ function facetCustom($controller, previewPaneProvider) {
 }
 
 /***/ }),
-/* 173 */
+/* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6418,7 +6269,7 @@ FacetDynamicCtrl.prototype.register = function (fo) {
 };
 
 /***/ }),
-/* 174 */
+/* 172 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6429,7 +6280,7 @@ function facetDynamic($controller, previewPaneProvider) {
   return {
     restrict: "E",
     require: ['^facetContainer'],
-    template: __webpack_require__(385),
+    template: __webpack_require__(384),
     transclude: true,
     replace: true,
     controller: "FacetDynamicCtrl as fac",
@@ -6489,7 +6340,7 @@ function facetDynamic($controller, previewPaneProvider) {
 }
 
 /***/ }),
-/* 175 */
+/* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6510,7 +6361,7 @@ function facetDynamicSelectedFilter() {
 }
 
 /***/ }),
-/* 176 */
+/* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6530,7 +6381,7 @@ function facetDynamicVisibleFilter() {
 }
 
 /***/ }),
-/* 177 */
+/* 175 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6571,7 +6422,7 @@ function dynamicFacetOption() {
 }
 
 /***/ }),
-/* 178 */
+/* 176 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6634,7 +6485,7 @@ FacetOptionCtrl.prototype.select = function () {
 };
 
 /***/ }),
-/* 179 */
+/* 177 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6686,7 +6537,296 @@ function facetOption() {
 }
 
 /***/ }),
+/* 178 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = FacetCtrl;
+FacetCtrl.$inject = ['$scope'];
+
+function FacetCtrl($scope) {
+  var vm = this;
+  vm.name = $scope.name;
+  vm.expanded = true;
+  vm.scrollConfig = {
+    autoReinitialise: true,
+    showOnlyOnHover: true,
+    enableKeyboardNavigation: true
+  };
+  vm.toggleExpand = function ($event) {
+    vm.expanded = !vm.expanded;
+    $event.currentTarget.blur();
+  };
+  vm.toggleExpandKey = function ($event) {
+    if ($event.keyCode === 13) {
+      vm.expanded = !vm.expanded;
+      $event.preventDefault();
+    }
+  };
+}
+
+FacetCtrl.prototype.register = function (fo) {
+  if (!this.options) {
+    this.options = [];
+  }
+  this.options.push(fo);
+};
+
+/***/ }),
+/* 179 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = facet;
+facet.$inject = ["$rootScope", "$timeout"];
+
+function facet($rootScope, $timeout) {
+  return {
+    restrict: "E",
+    template: __webpack_require__(385),
+    transclude: true,
+    replace: true,
+    controller: "FacetCtrl as fac",
+    scope: {
+      name: "=",
+      facetScroll: "@",
+      loadDelay: "=?"
+    },
+    link: {
+      pre: FacetDirectiveLinkFn
+    }
+  };
+
+  function FacetDirectiveLinkFn(scope, element) {
+
+    scope.enableScroll = scope.facetScroll !== "off";
+
+    var facetScrollContainer = [];
+    var paneMaxHeight = null;
+
+    $timeout(function () {
+      // Check when ng-if has been resolved.
+      facetScrollContainer = element.find('.facet-scroll');
+      if (facetScrollContainer.length > 0) {
+        //give the scroll container a unique id
+        facetScrollContainer.uniqueId();
+
+        scope.uniqueId = facetScrollContainer.attr('id');
+
+        paneMaxHeight = getMaxHeight(facetScrollContainer);
+
+        if (!(scope.loadDelay === undefined || scope.loadDelay <= 0)) {
+          $timeout(reinitialize, scope.loadDelay);
+        }
+        scope.$watch('fac.expanded', function () {
+          //this is done to re-initialise the custom scrollbar on facets
+          $timeout(reinitialize, 100);
+        });
+        // Event to allow reinitialise to be triggered externally
+        scope.$on("facet-reinitialise", function () {
+          $timeout(reinitialize, 100);
+        });
+      }
+    });
+
+    scope.fac.reinitialize = function () {
+      return reinitialize;
+    }();
+
+    function reinitialize() {
+      if (facetScrollContainer.length > 0) {
+        var jsp = facetScrollContainer.data("jsp");
+        if (jsp) {
+          jsp.reinitialise();
+
+          // Since jspContainer does not shrink correctly after reinitialize I have taken the fix from this bug:
+          // https://github.com/vitch/jScrollPane/issues/143
+          resizeJsp(element, paneMaxHeight);
+        }
+      }
+    }
+
+    function getMaxHeight(elem) {
+      var maxHeight = elem.css("max-height");
+      if (maxHeight.indexOf("px") !== -1) {
+        maxHeight = parseFloat(maxHeight);
+        if (isNaN(maxHeight)) {
+          maxHeight = null;
+        }
+      } else {
+        maxHeight = null;
+      }
+      return maxHeight;
+    }
+
+    function resizeJsp(parentElem, paneMaxHeight) {
+      var pane = parentElem.find(".jspPane");
+      var container = parentElem.find(".jspContainer");
+
+      var paneHeight = parentElem.innerHeight();
+
+      // If pane is shorter than the maximum allowed height, grow the container
+      if (paneMaxHeight !== null) {
+        if (paneHeight < paneMaxHeight) {
+          paneHeight = paneMaxHeight;
+          container.css({
+            height: paneMaxHeight + 'px'
+          });
+        }
+      }
+
+      // If the content has reduced in height, shrink the container
+      if (pane.outerHeight() < paneHeight) {
+        container.css({
+          height: pane.outerHeight() + 'px'
+        });
+      }
+    }
+  }
+}
+
+/***/ }),
 /* 180 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = FilterContainerCtrl;
+FilterContainerCtrl.$inject = ["$scope", "previewPaneProvider"];
+
+function FilterContainerCtrl($scope, previewPaneProvider) {
+  var vm = this;
+  vm.filteroptions = $scope.filteroptions = [];
+  vm.filters = $scope.filters = [];
+  vm.clearTitle = $scope.clearTitle;
+  vm.filterContainer = $scope;
+  vm.clearedFilter = 0;
+  vm.filterContainer.provider = previewPaneProvider;
+}
+
+FilterContainerCtrl.prototype.addFilterOptions = function (val) {
+  this.filteroptions.push(val);
+};
+
+FilterContainerCtrl.prototype.addFilters = function (val) {
+  this.filters.push(val);
+};
+
+FilterContainerCtrl.prototype.clearFilter = function () {
+
+  for (var i = this.filteroptions.length - 1; i >= 0; i--) {
+    this.filteroptions[i].select();
+  }
+
+  for (var idx = this.filters.length - 1; idx >= 0; idx--) {
+    this.filters[idx].previousFilter = null;
+    this.filters[idx].clearDynamic();
+  }
+
+  this.filterContainer.provider.preview.previewFile = "";
+};
+
+FilterContainerCtrl.prototype.setClass = function (filterAlreadySelected) {
+
+  if (filterAlreadySelected !== null) {
+
+    if (!filterAlreadySelected) {
+      this.clearedFilter++;
+    } else {
+      this.clearedFilter--;
+    }
+  }
+
+  this.filterContainer.containerClass = this.clearedFilter > 0 ? 'clear-selected' : '';
+};
+
+/***/ }),
+/* 181 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = filterContainer;
+function filterContainer() {
+  return {
+    restrict: "E",
+    template: __webpack_require__(386),
+    controller: "FilterContainerCtrl as fil",
+    transclude: true,
+    replace: true,
+    scope: {
+      clearTooltip: "@"
+    }
+  };
+}
+
+/***/ }),
+/* 182 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = FilterOptionCtrl;
+FilterOptionCtrl.$inject = ["$scope", "previewPaneProvider"];
+
+function FilterOptionCtrl($scope, previewPaneProvider) {
+  var vm = this;
+  vm.selectCallback = $scope.select;
+  vm.name = $scope.name;
+  vm.default = $scope.default;
+  vm.filterOption = $scope;
+
+  if (vm.default) {
+    vm.filterOption.selectedClass = true;
+  }
+  vm.filterOption.provider = previewPaneProvider;
+}
+
+FilterOptionCtrl.prototype.select = function () {
+  this.filter.setTitle(this.name, this.default);
+
+  for (var i = this.filter.filteroptions.length - 1; i >= 0; i--) {
+    this.filter.filteroptions[i].deselect();
+  }
+
+  this.filterOption.selectedClass = true;
+  this.selectCallback();
+  this.filterOption.provider.preview.previewFile = "";
+};
+
+FilterOptionCtrl.prototype.deselect = function () {
+  this.filterOption.selectedClass = false;
+};
+
+/***/ }),
+/* 183 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = filterOption;
+function filterOption() {
+  return {
+    restrict: "E",
+    require: ['^filter', '^^filterContainer'],
+    template: __webpack_require__(387),
+    controller: "FilterOptionCtrl as foc",
+    transclude: true,
+    replace: true,
+    scope: {
+      name: "=",
+      select: "&",
+      default: "="
+    },
+    link: function link(scope, element, attrs, controllers) {
+      scope.foc.filter = controllers[0];
+      scope.foc.filterContainer = controllers[1];
+      scope.foc.filter.addFilterOptions(scope.foc);
+      if (scope.default) {
+        scope.foc.filterContainer.addFilterOptions(scope.foc);
+      }
+    }
+  };
+}
+
+/***/ }),
+/* 184 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6784,7 +6924,7 @@ function FilterCtrl($scope, $timeout) {
 }
 
 /***/ }),
-/* 181 */
+/* 185 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6796,9 +6936,9 @@ function filter() {
     controller: "FilterCtrl as fc",
     template: function template(tElem, tAttrs) {
       if (tAttrs.filterOptions) {
-        return __webpack_require__(387);
+        return __webpack_require__(389);
       }
-      return __webpack_require__(386);
+      return __webpack_require__(388);
     },
     scope: {
       name: "=",
@@ -6819,146 +6959,6 @@ function filter() {
             element.find('ul li.input-container > input')[0].value = "";
           }
         });
-      }
-    }
-  };
-}
-
-/***/ }),
-/* 182 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = FilterContainerCtrl;
-FilterContainerCtrl.$inject = ["$scope", "previewPaneProvider"];
-
-function FilterContainerCtrl($scope, previewPaneProvider) {
-  var vm = this;
-  vm.filteroptions = $scope.filteroptions = [];
-  vm.filters = $scope.filters = [];
-  vm.clearTitle = $scope.clearTitle;
-  vm.filterContainer = $scope;
-  vm.clearedFilter = 0;
-  vm.filterContainer.provider = previewPaneProvider;
-}
-
-FilterContainerCtrl.prototype.addFilterOptions = function (val) {
-  this.filteroptions.push(val);
-};
-
-FilterContainerCtrl.prototype.addFilters = function (val) {
-  this.filters.push(val);
-};
-
-FilterContainerCtrl.prototype.clearFilter = function () {
-
-  for (var i = this.filteroptions.length - 1; i >= 0; i--) {
-    this.filteroptions[i].select();
-  }
-
-  for (var idx = this.filters.length - 1; idx >= 0; idx--) {
-    this.filters[idx].previousFilter = null;
-    this.filters[idx].clearDynamic();
-  }
-
-  this.filterContainer.provider.preview.previewFile = "";
-};
-
-FilterContainerCtrl.prototype.setClass = function (filterAlreadySelected) {
-
-  if (filterAlreadySelected !== null) {
-
-    if (!filterAlreadySelected) {
-      this.clearedFilter++;
-    } else {
-      this.clearedFilter--;
-    }
-  }
-
-  this.filterContainer.containerClass = this.clearedFilter > 0 ? 'clear-selected' : '';
-};
-
-/***/ }),
-/* 183 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = filterContainer;
-function filterContainer() {
-  return {
-    restrict: "E",
-    template: __webpack_require__(388),
-    controller: "FilterContainerCtrl as fil",
-    transclude: true,
-    replace: true,
-    scope: {
-      clearTooltip: "@"
-    }
-  };
-}
-
-/***/ }),
-/* 184 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = FilterOptionCtrl;
-FilterOptionCtrl.$inject = ["$scope", "previewPaneProvider"];
-
-function FilterOptionCtrl($scope, previewPaneProvider) {
-  var vm = this;
-  vm.selectCallback = $scope.select;
-  vm.name = $scope.name;
-  vm.default = $scope.default;
-  vm.filterOption = $scope;
-
-  if (vm.default) {
-    vm.filterOption.selectedClass = true;
-  }
-  vm.filterOption.provider = previewPaneProvider;
-}
-
-FilterOptionCtrl.prototype.select = function () {
-  this.filter.setTitle(this.name, this.default);
-
-  for (var i = this.filter.filteroptions.length - 1; i >= 0; i--) {
-    this.filter.filteroptions[i].deselect();
-  }
-
-  this.filterOption.selectedClass = true;
-  this.selectCallback();
-  this.filterOption.provider.preview.previewFile = "";
-};
-
-FilterOptionCtrl.prototype.deselect = function () {
-  this.filterOption.selectedClass = false;
-};
-
-/***/ }),
-/* 185 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = filterOption;
-function filterOption() {
-  return {
-    restrict: "E",
-    require: ['^filter', '^^filterContainer'],
-    template: __webpack_require__(389),
-    controller: "FilterOptionCtrl as foc",
-    transclude: true,
-    replace: true,
-    scope: {
-      name: "=",
-      select: "&",
-      default: "="
-    },
-    link: function link(scope, element, attrs, controllers) {
-      scope.foc.filter = controllers[0];
-      scope.foc.filterContainer = controllers[1];
-      scope.foc.filter.addFilterOptions(scope.foc);
-      if (scope.default) {
-        scope.foc.filterContainer.addFilterOptions(scope.foc);
       }
     }
   };
@@ -7484,51 +7484,6 @@ function grid() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = gridCell;
-gridCell.$inject = ['$compile', '$templateRequest'];
-
-function gridCell($compile, $templateRequest) {
-    return {
-        restrict: 'A',
-        require: '^^grid',
-        link: function link(scope, element) {
-
-            var rowScope = scope.$new();
-
-            loadTemplate(renderTemplate);
-
-            scope.$watch('data', updateScope, true);
-            scope.$watch('column', updateScope, true);
-
-            function loadTemplate(callback) {
-                if (scope.column.template) {
-                    callback.call(null, scope.column.template);
-                } else {
-                    $templateRequest(scope.column.templateUrl).then(callback);
-                }
-            }
-
-            function renderTemplate(template) {
-                updateScope();
-                element.append($compile(template)(rowScope));
-            }
-
-            function updateScope() {
-
-                // add data to scope
-                for (var prop in scope.data) {
-                    rowScope[prop] = scope.data[prop];
-                }
-            }
-        }
-    };
-}
-
-/***/ }),
-/* 198 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = gridPlugins;
 function gridPlugins() {
 
@@ -7576,6 +7531,51 @@ function gridPlugins() {
             }
         };
     }
+}
+
+/***/ }),
+/* 198 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = gridCell;
+gridCell.$inject = ['$compile', '$templateRequest'];
+
+function gridCell($compile, $templateRequest) {
+    return {
+        restrict: 'A',
+        require: '^^grid',
+        link: function link(scope, element) {
+
+            var rowScope = scope.$new();
+
+            loadTemplate(renderTemplate);
+
+            scope.$watch('data', updateScope, true);
+            scope.$watch('column', updateScope, true);
+
+            function loadTemplate(callback) {
+                if (scope.column.template) {
+                    callback.call(null, scope.column.template);
+                } else {
+                    $templateRequest(scope.column.templateUrl).then(callback);
+                }
+            }
+
+            function renderTemplate(template) {
+                updateScope();
+                element.append($compile(template)(rowScope));
+            }
+
+            function updateScope() {
+
+                // add data to scope
+                for (var prop in scope.data) {
+                    rowScope[prop] = scope.data[prop];
+                }
+            }
+        }
+    };
 }
 
 /***/ }),
@@ -15489,136 +15489,6 @@ function PreviewPane() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = PreviewPaneCtrl;
-PreviewPaneCtrl.$inject = ["$scope", "$rootScope", "previewPaneProvider", "windowCommunicationService"];
-
-function PreviewPaneCtrl($scope, $rootScope, previewPaneProvider, windowCommunicationService) {
-  var vm = this;
-  vm.previewpane = $scope;
-  vm.provider = previewPaneProvider;
-  vm.previewOn = previewPaneProvider.preview.previewOn;
-
-  // if name if broadcast from previewPaneWindow directive, then open preview pane window
-  $scope.$on('$previewPaneWindowOpen', function (event, data) {
-    if (vm.previewpane.previewName === data) {
-      vm.openInNewWindow();
-    }
-  });
-
-  vm.previewWindow = null;
-
-  // if preview file changes while window open, reload window to show the new file
-  $scope.$watch(function () {
-    return vm.previewpane.previewFile;
-  }, function (nV, oV) {
-    if (nV === oV) return;
-    if (vm.previewWindow === null || vm.previewWindow.closed) return;
-
-    windowCommunicationService.updateContent(vm.previewpane.$parent, nV);
-  });
-
-  vm.updatePreviewOn = function (nv) {
-    vm.previewOn = nv;
-  };
-
-  vm.updateHasPreviewFile = function (nv) {
-    vm.provider.preview.previewFile = nv;
-    vm.previewpane.previewFile = vm.provider.preview.previewFile;
-
-    return vm.previewpane.previewFile;
-  };
-
-  vm.openInNewWindow = function () {
-    // if the button is clicked while the preview window is open, return
-    if (vm.previewWindow && !vm.previewWindow.closed || vm.previewpane.previewFile === undefined || vm.previewpane.previewFile === "") return;else vm.previewWindow = windowCommunicationService.createWindow('Preview', vm.previewpane.$parent, vm.previewpane.previewFile);
-  };
-}
-
-/***/ }),
-/* 259 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = previewPane;
-previewPane.$inject = ["$document", "$window", "previewPaneProvider", "$q", "$compile", "$templateRequest", "$timeout"];
-
-function previewPane($document, $window, previewPaneProvider, $q, $compile, $templateRequest, $timeout) {
-  return {
-    restrict: "E",
-    template: __webpack_require__(413),
-    controller: "PreviewPaneCtrl as pp",
-    scope: {
-      previewFile: "=",
-      previewTitle: "=?",
-      previewSubtitle: "=?",
-      previewEmptyText: "=",
-      childScope: "=",
-      shadow: "=",
-      previewName: "=?"
-    },
-    replace: true,
-    link: function link(scope) {
-
-      var modalDomEl = "";
-      // extended in the future to opt between template and templateUrl.
-      function getTemplatePromise(options) {
-        return $templateRequest(options);
-      }
-
-      //extended in the future to accomodate angular resolves// if needed.
-      function getResolvePromises() {
-        return [];
-      }
-
-      scope.preview = previewPaneProvider.preview;
-      scope.$watch("preview", function (nv, ov) {
-
-        if (nv.previewOn !== ov.previewOn) {
-          scope.pp.updatePreviewOn(nv.previewOn);
-        }
-
-        scope.pp.updateHasPreviewFile(nv.previewFile);
-        if (nv.previewFile !== ov.previewFile) {
-
-          if (nv.previewFile === "") {
-            angular.element('.preview-pane-selected-item').removeClass('preview-pane-selected-item');
-          }
-        }
-      }, true);
-
-      scope.$watch("previewFile", function (nv) {
-        if (scope.previewFile !== "") {
-          var templateAndPromise = $q.all([getTemplatePromise(nv)].concat(getResolvePromises()));
-          var value = "";
-          templateAndPromise.then(function resolveSuccess(tpl) {
-            if (scope.childScope !== null) {
-              value = $compile(tpl[0])(scope.childScope);
-            } else {
-              value = tpl[0];
-            }
-            modalDomEl = value;
-          });
-
-          templateAndPromise.finally(function () {
-            $timeout(function () {
-              var el = angular.element('.previewFile');
-              el.empty();
-              el.append(modalDomEl);
-            });
-          });
-        } else {
-          scope.pp.updateHasPreviewFile(nv);
-        }
-      });
-    }
-  };
-}
-
-/***/ }),
-/* 260 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = PreviewPaneItemCtrl;
 PreviewPaneItemCtrl.$inject = ["$scope", "$attrs", "$parse"];
 
@@ -15640,7 +15510,7 @@ PreviewPaneItemCtrl.prototype.select = function (val) {
 };
 
 /***/ }),
-/* 261 */
+/* 259 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15780,7 +15650,7 @@ function previewPaneItem(keyboardService, $timeout) {
 }
 
 /***/ }),
-/* 262 */
+/* 260 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15802,7 +15672,7 @@ PreviewPaneToggleCtrl.prototype.togglePreview = function () {
 };
 
 /***/ }),
-/* 263 */
+/* 261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15810,7 +15680,7 @@ PreviewPaneToggleCtrl.prototype.togglePreview = function () {
 function previewPaneToggle() {
   return {
     restrict: "E",
-    template: __webpack_require__(414),
+    template: __webpack_require__(413),
     controller: "PreviewPaneToggleCtrl as ppt",
     replace: true,
     scope: {
@@ -15826,7 +15696,7 @@ function previewPaneToggle() {
 }
 
 /***/ }),
-/* 264 */
+/* 262 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15846,6 +15716,136 @@ function previewPaneWindow($rootScope) {
       scope.openInNewWindow = function () {
         $rootScope.$broadcast('$previewPaneWindowOpen', scope.previewName);
       };
+    }
+  };
+}
+
+/***/ }),
+/* 263 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = PreviewPaneCtrl;
+PreviewPaneCtrl.$inject = ["$scope", "$rootScope", "previewPaneProvider", "windowCommunicationService"];
+
+function PreviewPaneCtrl($scope, $rootScope, previewPaneProvider, windowCommunicationService) {
+  var vm = this;
+  vm.previewpane = $scope;
+  vm.provider = previewPaneProvider;
+  vm.previewOn = previewPaneProvider.preview.previewOn;
+
+  // if name if broadcast from previewPaneWindow directive, then open preview pane window
+  $scope.$on('$previewPaneWindowOpen', function (event, data) {
+    if (vm.previewpane.previewName === data) {
+      vm.openInNewWindow();
+    }
+  });
+
+  vm.previewWindow = null;
+
+  // if preview file changes while window open, reload window to show the new file
+  $scope.$watch(function () {
+    return vm.previewpane.previewFile;
+  }, function (nV, oV) {
+    if (nV === oV) return;
+    if (vm.previewWindow === null || vm.previewWindow.closed) return;
+
+    windowCommunicationService.updateContent(vm.previewpane.$parent, nV);
+  });
+
+  vm.updatePreviewOn = function (nv) {
+    vm.previewOn = nv;
+  };
+
+  vm.updateHasPreviewFile = function (nv) {
+    vm.provider.preview.previewFile = nv;
+    vm.previewpane.previewFile = vm.provider.preview.previewFile;
+
+    return vm.previewpane.previewFile;
+  };
+
+  vm.openInNewWindow = function () {
+    // if the button is clicked while the preview window is open, return
+    if (vm.previewWindow && !vm.previewWindow.closed || vm.previewpane.previewFile === undefined || vm.previewpane.previewFile === "") return;else vm.previewWindow = windowCommunicationService.createWindow('Preview', vm.previewpane.$parent, vm.previewpane.previewFile);
+  };
+}
+
+/***/ }),
+/* 264 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = previewPane;
+previewPane.$inject = ["$document", "$window", "previewPaneProvider", "$q", "$compile", "$templateRequest", "$timeout"];
+
+function previewPane($document, $window, previewPaneProvider, $q, $compile, $templateRequest, $timeout) {
+  return {
+    restrict: "E",
+    template: __webpack_require__(414),
+    controller: "PreviewPaneCtrl as pp",
+    scope: {
+      previewFile: "=",
+      previewTitle: "=?",
+      previewSubtitle: "=?",
+      previewEmptyText: "=",
+      childScope: "=",
+      shadow: "=",
+      previewName: "=?"
+    },
+    replace: true,
+    link: function link(scope) {
+
+      var modalDomEl = "";
+      // extended in the future to opt between template and templateUrl.
+      function getTemplatePromise(options) {
+        return $templateRequest(options);
+      }
+
+      //extended in the future to accomodate angular resolves// if needed.
+      function getResolvePromises() {
+        return [];
+      }
+
+      scope.preview = previewPaneProvider.preview;
+      scope.$watch("preview", function (nv, ov) {
+
+        if (nv.previewOn !== ov.previewOn) {
+          scope.pp.updatePreviewOn(nv.previewOn);
+        }
+
+        scope.pp.updateHasPreviewFile(nv.previewFile);
+        if (nv.previewFile !== ov.previewFile) {
+
+          if (nv.previewFile === "") {
+            angular.element('.preview-pane-selected-item').removeClass('preview-pane-selected-item');
+          }
+        }
+      }, true);
+
+      scope.$watch("previewFile", function (nv) {
+        if (scope.previewFile !== "") {
+          var templateAndPromise = $q.all([getTemplatePromise(nv)].concat(getResolvePromises()));
+          var value = "";
+          templateAndPromise.then(function resolveSuccess(tpl) {
+            if (scope.childScope !== null) {
+              value = $compile(tpl[0])(scope.childScope);
+            } else {
+              value = tpl[0];
+            }
+            modalDomEl = value;
+          });
+
+          templateAndPromise.finally(function () {
+            $timeout(function () {
+              var el = angular.element('.previewFile');
+              el.empty();
+              el.append(modalDomEl);
+            });
+          });
+        } else {
+          scope.pp.updateHasPreviewFile(nv);
+        }
+      });
     }
   };
 }
@@ -18683,6 +18683,85 @@ function sideNavigation() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = SliderChartCtrl;
+SliderChartCtrl.$inject = ['$scope'];
+
+function SliderChartCtrl($scope) {
+
+    var vm = this;
+
+    var min = vm.sliderOptions.track.min;
+    var max = vm.sliderOptions.track.max;
+    var range = max - min;
+
+    var updateLeftOverlay = function updateLeftOverlay() {
+        vm.left = (vm.ngModel.low - min) / range * 100;
+        if (vm.right !== undefined) {
+            vm.middle = 100 - vm.left - vm.right;
+        }
+        if (vm.left === 0) {
+            vm.hideLeftBorder = true;
+        } else {
+            vm.hideLeftBorder = false;
+        }
+    };
+
+    var updateRightOverlay = function updateRightOverlay() {
+        vm.right = (max - vm.ngModel.high) / range * 100;
+        vm.middle = 100 - vm.left - vm.right;
+        if (vm.right === 0) {
+            vm.hideRightBorder = true;
+        } else {
+            vm.hideRightBorder = false;
+        }
+    };
+
+    // use timeout to apply on next digest cycle
+    updateLeftOverlay();
+    updateRightOverlay();
+
+    // watch for any changes to low
+    $scope.$watch('vm.ngModel.low', function (newValue, oldValue) {
+        if (newValue !== oldValue) {
+            updateLeftOverlay();
+        }
+    });
+
+    // watch for any changes to high+
+    $scope.$watch('vm.ngModel.high', function (newValue, oldValue) {
+        if (newValue !== oldValue) {
+            updateRightOverlay();
+        }
+    });
+}
+
+/***/ }),
+/* 290 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = sliderChart;
+function sliderChart() {
+    return {
+        restrict: 'E',
+        template: __webpack_require__(425),
+        scope: {
+            sliderOptions: '=',
+            ngModel: '=',
+            chartOptions: '=',
+            chartData: '='
+        },
+        require: 'ngModel',
+        controller: 'SliderChartCtrl as vm',
+        bindToController: true
+    };
+}
+
+/***/ }),
+/* 291 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = SliderCtrl;
 SliderCtrl.$inject = ['$scope', '$timeout'];
 
@@ -19140,7 +19219,7 @@ function SliderCtrl($scope, $timeout) {
 }
 
 /***/ }),
-/* 290 */
+/* 292 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19150,7 +19229,7 @@ slider.$inject = ['$timeout'];
 function slider($timeout) {
     return {
         restrict: 'E',
-        template: __webpack_require__(425),
+        template: __webpack_require__(426),
         scope: {
             options: '=',
             ngModel: '='
@@ -19528,85 +19607,6 @@ function slider($timeout) {
                 return false;
             }
         }
-    };
-}
-
-/***/ }),
-/* 291 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = SliderChartCtrl;
-SliderChartCtrl.$inject = ['$scope'];
-
-function SliderChartCtrl($scope) {
-
-    var vm = this;
-
-    var min = vm.sliderOptions.track.min;
-    var max = vm.sliderOptions.track.max;
-    var range = max - min;
-
-    var updateLeftOverlay = function updateLeftOverlay() {
-        vm.left = (vm.ngModel.low - min) / range * 100;
-        if (vm.right !== undefined) {
-            vm.middle = 100 - vm.left - vm.right;
-        }
-        if (vm.left === 0) {
-            vm.hideLeftBorder = true;
-        } else {
-            vm.hideLeftBorder = false;
-        }
-    };
-
-    var updateRightOverlay = function updateRightOverlay() {
-        vm.right = (max - vm.ngModel.high) / range * 100;
-        vm.middle = 100 - vm.left - vm.right;
-        if (vm.right === 0) {
-            vm.hideRightBorder = true;
-        } else {
-            vm.hideRightBorder = false;
-        }
-    };
-
-    // use timeout to apply on next digest cycle
-    updateLeftOverlay();
-    updateRightOverlay();
-
-    // watch for any changes to low
-    $scope.$watch('vm.ngModel.low', function (newValue, oldValue) {
-        if (newValue !== oldValue) {
-            updateLeftOverlay();
-        }
-    });
-
-    // watch for any changes to high+
-    $scope.$watch('vm.ngModel.high', function (newValue, oldValue) {
-        if (newValue !== oldValue) {
-            updateRightOverlay();
-        }
-    });
-}
-
-/***/ }),
-/* 292 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = sliderChart;
-function sliderChart() {
-    return {
-        restrict: 'E',
-        template: __webpack_require__(426),
-        scope: {
-            sliderOptions: '=',
-            ngModel: '=',
-            chartOptions: '=',
-            chartData: '='
-        },
-        require: 'ngModel',
-        controller: 'SliderChartCtrl as vm',
-        bindToController: true
     };
 }
 
@@ -21427,9 +21427,9 @@ SocialChartCtrl.prototype.deselectText = function () {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = socialChart;
-socialChart.$inject = ["$timeout", "$interval"];
+socialChart.$inject = ["$timeout", "$interval", "$colorService"];
 
-function socialChart($timeout, $interval) {
+function socialChart($timeout, $interval, $colorService) {
     return {
         restrict: "E",
         scope: {
@@ -21464,8 +21464,8 @@ function socialChart($timeout, $interval) {
         link: function link(scope, element) {
 
             var config = {
-                'defaultNodeColor': '#00cceb',
-                'defaultEdgeColor': '#1a8882',
+                'defaultNodeColor': $colorService.getColor("vibrant1").toHex(),
+                'defaultEdgeColor': $colorService.getColor("vibrant1").setAlpha(0.6).toRgba(),
                 'defaultLabelColor': 'rgba(255,255,255,0.6)',
                 'labelSizeRatio': 2,
                 'enableEdgeHovering': true,
@@ -22172,63 +22172,6 @@ function sortDirectionToggle() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = SorterController;
-SorterController.$inject = ["$scope"];
-
-function SorterController($scope) {
-    var vm = this;
-    vm.sorteroption = $scope;
-    vm.default = $scope.title;
-    vm.sorteroptions = $scope.sorteroptions = [];
-    vm.previousSorter = null;
-}
-
-SorterController.prototype.setTitle = function (title, defaultval) {
-
-    var sorterAlreadySelected = null;
-    this.sorteroption.name = title;
-    this.sorteroption.class = !defaultval ? 'sorter-selected' : '';
-
-    if (this.previousSorter === this) {
-
-        if (defaultval) {
-            sorterAlreadySelected = true;
-            this.previousSorter = null;
-        } else {
-            sorterAlreadySelected = false;
-            this.previousSorter = this;
-        }
-    }
-};
-
-SorterController.prototype.addSorterOptions = function (val) {
-    this.sorteroptions.push(val);
-};
-
-/***/ }),
-/* 303 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = sorter;
-function sorter() {
-    return {
-        restrict: "E",
-        controller: "SorterCtrl as sc",
-        template: __webpack_require__(431),
-        scope: {
-            sorterTitle: "="
-        },
-        transclude: true,
-        replace: true
-    };
-}
-
-/***/ }),
-/* 304 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = SorterHeaderCtrl;
 SorterHeaderCtrl.$inject = ["$scope", "$attrs"];
 
@@ -22297,7 +22240,7 @@ function SorterHeaderCtrl($scope, $attrs) {
 }
 
 /***/ }),
-/* 305 */
+/* 303 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22308,7 +22251,7 @@ function sortableHeader($resize, $timeout) {
     return {
         restrict: "A",
         scope: true,
-        template: __webpack_require__(432),
+        template: __webpack_require__(431),
         controller: "SorterHeaderCtrl as vm",
         link: function link(scope, element) {
 
@@ -22419,7 +22362,7 @@ function sortableHeader($resize, $timeout) {
 }
 
 /***/ }),
-/* 306 */
+/* 304 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22455,7 +22398,7 @@ SorterOptionCtrl.prototype.deselect = function () {
 };
 
 /***/ }),
-/* 307 */
+/* 305 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22464,7 +22407,7 @@ function sorterOption() {
     return {
         restrict: "E",
         require: '^sorter',
-        template: __webpack_require__(433),
+        template: __webpack_require__(432),
         controller: "SorterOptionCtrl as soc",
         transclude: true,
         replace: true,
@@ -22483,6 +22426,63 @@ function sorterOption() {
                 controller.setTitle(scope.name, scope.default);
             }
         }
+    };
+}
+
+/***/ }),
+/* 306 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = SorterController;
+SorterController.$inject = ["$scope"];
+
+function SorterController($scope) {
+    var vm = this;
+    vm.sorteroption = $scope;
+    vm.default = $scope.title;
+    vm.sorteroptions = $scope.sorteroptions = [];
+    vm.previousSorter = null;
+}
+
+SorterController.prototype.setTitle = function (title, defaultval) {
+
+    var sorterAlreadySelected = null;
+    this.sorteroption.name = title;
+    this.sorteroption.class = !defaultval ? 'sorter-selected' : '';
+
+    if (this.previousSorter === this) {
+
+        if (defaultval) {
+            sorterAlreadySelected = true;
+            this.previousSorter = null;
+        } else {
+            sorterAlreadySelected = false;
+            this.previousSorter = this;
+        }
+    }
+};
+
+SorterController.prototype.addSorterOptions = function (val) {
+    this.sorteroptions.push(val);
+};
+
+/***/ }),
+/* 307 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = sorter;
+function sorter() {
+    return {
+        restrict: "E",
+        controller: "SorterCtrl as sc",
+        template: __webpack_require__(433),
+        scope: {
+            sorterTitle: "="
+        },
+        transclude: true,
+        replace: true
     };
 }
 
@@ -31238,8 +31238,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<a class=\"btn-back m-r-xs\" aria-label=\"{{ariaLabel}}\" role=\"button\" type=\"button\"></a>";
-var id1="directives/backButton/backButton.html";
+var v1="<span class=\"hpe-icon hpe-previous text-primary\"></span>\n";
+var id1="directives/backButtonHeader/backButtonHeader.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -31252,8 +31252,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<span class=\"hpe-icon hpe-previous text-primary\"></span>\n";
-var id1="directives/backButtonHeader/backButtonHeader.html";
+var v1="<a class=\"btn-back m-r-xs\" aria-label=\"{{ariaLabel}}\" role=\"button\" type=\"button\"></a>";
+var id1="directives/backButton/backButton.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -31294,8 +31294,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<div class=\"component-list-component\">\n<div class=\"component-content\" ng-keydown=\"vm.keyDown($event)\"></div>\n<div class=\"component-remove\" ng-click=\"vm.removeField()\" ng-disabled=\"vm.removingDisabled\">\n<span class=\"hpe-icon hpe-close\"></span>\n</div>\n</div>";
-var id1="componentList/component/component.html";
+var v1="<div class=\"component-list\">\n<div class=\"component-stack\">\n<div class=\"component-container\" ng-repeat=\"component in vm.components track by $index\" ng-transclude>\n</div>\n</div>\n<div class=\"component-options\" tabindex=\"0\" ng-click=\"vm.addField()\" ng-keydown=\"$event.keyCode === 13 ? vm.addField() : null\" ng-disabled=\"vm.addingDisabled\">\n<div class=\"component-add-btn\">\n<span class=\"hpe-icon hpe-add\"></span>\n</div>\n<p class=\"component-add-text\" ng-bind=\"::vm.buttonText\"></p>\n</div>\n</div>";
+var id1="directives/componentList/componentList.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -31308,8 +31308,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<div class=\"component-list\">\n<div class=\"component-stack\">\n<div class=\"component-container\" ng-repeat=\"component in vm.components track by $index\" ng-transclude>\n</div>\n</div>\n<div class=\"component-options\" tabindex=\"0\" ng-click=\"vm.addField()\" ng-keydown=\"$event.keyCode === 13 ? vm.addField() : null\" ng-disabled=\"vm.addingDisabled\">\n<div class=\"component-add-btn\">\n<span class=\"hpe-icon hpe-add\"></span>\n</div>\n<p class=\"component-add-text\" ng-bind=\"::vm.buttonText\"></p>\n</div>\n</div>";
-var id1="directives/componentList/componentList.html";
+var v1="<div class=\"component-list-component\">\n<div class=\"component-content\" ng-keydown=\"vm.keyDown($event)\"></div>\n<div class=\"component-remove\" ng-click=\"vm.removeField()\" ng-disabled=\"vm.removingDisabled\">\n<span class=\"hpe-icon hpe-close\"></span>\n</div>\n</div>";
+var id1="componentList/component/component.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -31462,20 +31462,6 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<div class=\"facet\">\n<a class=\"facet-header\" href=\"\" ng-click=\"fac.toggleExpand($event)\" ng-keydown=\"fac.toggleExpandKey($event)\" tabindex=\"1\">\n<span single-line-overflow-tooltip class=\"facet-name\" ng-bind=\"name\"></span>\n<span class=\"pull-right hpe-icon\" ng-class=\"{'hpe-down':fac.expanded,'hpe-previous':!fac.expanded}\"></span>\n</a>\n<div ng-if=\"enableScroll\" class=\"facet-scroll\" scroll-config=\"fac.scrollConfig\" scroll-pane scroll-name=\"facetScroll\">\n<ul class=\"facet-options\" ng-transclude ng-show=\"fac.expanded\">\n</ul>\n</div>\n<div ng-if=\"!enableScroll\">\n<ul class=\"facet-options\" ng-transclude ng-show=\"fac.expanded\">\n</ul>\n</div>\n</div>\n";
-var id1="facets/facet/facet.html";
-var inj=angular.element(window.document).injector();
-if(inj){inj.get("$templateCache").put(id1,v1);}
-else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
-module.exports=v1;
-
-/***/ }),
-/* 383 */
-/***/ (function(module, exports) {
-
-var angular=window.angular,ngModule;
-try {ngModule=angular.module(["ng"])}
-catch(e){ngModule=angular.module("ng",[])}
 var v1=" <div class=\"facets-container\">\n<div class=\"facets-selected-container clearfix\" ng-if=\"fc.selected.length > 0 || fc.noItemsText\">\n<div class=\"facets-selected-title\">{{fc.selectTitle}}\n<a ng-if=\"fc.selected.length > 0\" class=\"facets-selected-clear pull-right\" href=\"\" ng-click=\"fc.clearAll()\" tooltip=\"{{fc.clearText}}\" aria-label=\"{{fc.clearText}}\" tooltip-placement=\"left\" tooltip-append-to-body=\"false\" tabindex=\"1\"></a>\n</div>\n<p ng-if=\"fc.noItemsText && fc.selected.length === 0\" ng-bind=\"fc.noItemsText\" class=\"facets-none-selected\"></p>\n<ul class=\"clearfix\">\n<li ng-repeat=\"selected in fc.selected\">\n<a href=\"\" ng-click=\"selected.deselect();\" tabindex=\"1\">\n<span class=\"facet-selected-name\" ng-bind=\"selected.option.displayName || selected.option.name\"></span>&nbsp;\n<span class=\"hpe-icon hpe-close\"></span>\n</a>\n</li>\n</ul>\n</div>\n<div ng-transclude></div>\n</div>\n";
 var id1="facets/facetContainer/facetContainer.html";
 var inj=angular.element(window.document).injector();
@@ -31484,7 +31470,7 @@ else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
 module.exports=v1;
 
 /***/ }),
-/* 384 */
+/* 383 */
 /***/ (function(module, exports) {
 
 var angular=window.angular,ngModule;
@@ -31498,7 +31484,7 @@ else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
 module.exports=v1;
 
 /***/ }),
-/* 385 */
+/* 384 */
 /***/ (function(module, exports) {
 
 var angular=window.angular,ngModule;
@@ -31512,35 +31498,21 @@ else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
 module.exports=v1;
 
 /***/ }),
+/* 385 */
+/***/ (function(module, exports) {
+
+var angular=window.angular,ngModule;
+try {ngModule=angular.module(["ng"])}
+catch(e){ngModule=angular.module("ng",[])}
+var v1="<div class=\"facet\">\n<a class=\"facet-header\" href=\"\" ng-click=\"fac.toggleExpand($event)\" ng-keydown=\"fac.toggleExpandKey($event)\" tabindex=\"1\">\n<span single-line-overflow-tooltip class=\"facet-name\" ng-bind=\"name\"></span>\n<span class=\"pull-right hpe-icon\" ng-class=\"{'hpe-down':fac.expanded,'hpe-previous':!fac.expanded}\"></span>\n</a>\n<div ng-if=\"enableScroll\" class=\"facet-scroll\" scroll-config=\"fac.scrollConfig\" scroll-pane scroll-name=\"facetScroll\">\n<ul class=\"facet-options\" ng-transclude ng-show=\"fac.expanded\">\n</ul>\n</div>\n<div ng-if=\"!enableScroll\">\n<ul class=\"facet-options\" ng-transclude ng-show=\"fac.expanded\">\n</ul>\n</div>\n</div>\n";
+var id1="facets/facet/facet.html";
+var inj=angular.element(window.document).injector();
+if(inj){inj.get("$templateCache").put(id1,v1);}
+else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
+module.exports=v1;
+
+/***/ }),
 /* 386 */
-/***/ (function(module, exports) {
-
-var angular=window.angular,ngModule;
-try {ngModule=angular.module(["ng"])}
-catch(e){ngModule=angular.module("ng",[])}
-var v1="<div class=\"btn-group filter\">\n<button data-toggle=\"dropdown\" ng-class=\"class\" class=\"filter-dropdown btn dropdown-toggle\" aria-expanded=\"false\" id=\"btndropdown\">{{name}}<span class=\"hpe-icon hpe-down\"></span>\n</button>\n<ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"btndropdown\" ng-transclude></ul>\n</div>";
-var id1="filters/filter/filter.html";
-var inj=angular.element(window.document).injector();
-if(inj){inj.get("$templateCache").put(id1,v1);}
-else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
-module.exports=v1;
-
-/***/ }),
-/* 387 */
-/***/ (function(module, exports) {
-
-var angular=window.angular,ngModule;
-try {ngModule=angular.module(["ng"])}
-catch(e){ngModule=angular.module("ng",[])}
-var v1="<div class=\"btn-group filter dynamic-filter-toggle\">\n<button data-toggle=\"dropdown\" ng-class=\"class\" class=\"filter-dropdown btn dropdown-toggle\" aria-expanded=\"false\" id=\"btndropdown\">{{name}}<span class=\"hpe-icon hpe-down\"></span>\n</button>\n<ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"btndropdown\" ng-if=\"!showListControl\">\n<filter-option ng-if=\"dynamicOptions.options[0]\" name=\"dynamicOptions.options[0].name\" select=\"dynamicOptions.options[0].select()\" default=\"dynamicOptions.options[0].default\"></filter-option>\n<filter-option ng-repeat=\"option in dynamicOptions.fixedOptions\" name=\"option.name\" select=\"option.select()\" default=\"option.default\"></filter-option>\n<filter-option ng-repeat=\"option in dynamicOptions.options\" ng-if=\"!$first\" name=\"option.name\" select=\"option.select()\" default=\"option.default\"></filter-option>\n</ul>\n<ul class=\"dropdown-menu dynamic-filter\" role=\"menu\" aria-labelledby=\"btndropdown\" ng-if=\"showListControl\" ng-click=\"$event.preventDefault(); $event.stopImmediatePropagation();\">\n<li class=\"default-container\">\n<filter-option name=\"dynamicOptions.options[0].name\" select=\"dynamicOptions.options[0].select()\" default=\"dynamicOptions.options[0].default\" ng-click=\"fc.clearDynamic()\"></filter-option>\n<filter-option ng-repeat=\"option in dynamicOptions.fixedOptions\" name=\"option.name\" select=\"option.select()\" default=\"option.default\" ng-click=\"fc.clearDynamic()\">\n</filter-option>\n</li>\n<li ng-if=\"dynamicSelected.name\" id=\"dynamic-filter\">\n<a href=\"\" target=\"_blank\" ng-click=\"dynamicSelected.name.select(); fc.dismiss();\">\n<i class=\"hpe-icon hpe-checkmark\"></i>\n<span>{{dynamicSelected.name}}</span>\n</a>\n</li>\n<li class=\"input-container\">\n<input placeholder=\"Find {{ type }}...\" type=\"text\" ng-model=\"dynamicTypeaheadSelected.text\" typeahead=\"option as option.name for option in dynamicOptions.options | filter:$viewValue | limitTo:maxDisplayableItems\" ng-change=\"fc.dynamicTypeaheadOnChange()\" typeahead-min-length=\"minCharsForTypeAhead\" typeahead-on-select=\"fc.dynamicFilterSelected($item, $model, $label)\" class=\"form-control\">\n</li>\n</ul>\n</div>\n";
-var id1="filters/filter/filterOptions.html";
-var inj=angular.element(window.document).injector();
-if(inj){inj.get("$templateCache").put(id1,v1);}
-else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
-module.exports=v1;
-
-/***/ }),
-/* 388 */
 /***/ (function(module, exports) {
 
 var angular=window.angular,ngModule;
@@ -31554,7 +31526,7 @@ else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
 module.exports=v1;
 
 /***/ }),
-/* 389 */
+/* 387 */
 /***/ (function(module, exports) {
 
 var angular=window.angular,ngModule;
@@ -31562,6 +31534,34 @@ try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
 var v1="<li>\n<a href=\"\" target=\"_blank\" ng-click=\"foc.select()\">\n<i ng-class=\"{invisible: !selectedClass}\" class=\"hpe-icon hpe-checkmark\"></i>\n<span>{{foc.name}}</span>\n</a>\n</li>\n";
 var id1="filters/filterOption/filterOption.html";
+var inj=angular.element(window.document).injector();
+if(inj){inj.get("$templateCache").put(id1,v1);}
+else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
+module.exports=v1;
+
+/***/ }),
+/* 388 */
+/***/ (function(module, exports) {
+
+var angular=window.angular,ngModule;
+try {ngModule=angular.module(["ng"])}
+catch(e){ngModule=angular.module("ng",[])}
+var v1="<div class=\"btn-group filter\">\n<button data-toggle=\"dropdown\" ng-class=\"class\" class=\"filter-dropdown btn dropdown-toggle\" aria-expanded=\"false\" id=\"btndropdown\">{{name}}<span class=\"hpe-icon hpe-down\"></span>\n</button>\n<ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"btndropdown\" ng-transclude></ul>\n</div>";
+var id1="filters/filter/filter.html";
+var inj=angular.element(window.document).injector();
+if(inj){inj.get("$templateCache").put(id1,v1);}
+else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
+module.exports=v1;
+
+/***/ }),
+/* 389 */
+/***/ (function(module, exports) {
+
+var angular=window.angular,ngModule;
+try {ngModule=angular.module(["ng"])}
+catch(e){ngModule=angular.module("ng",[])}
+var v1="<div class=\"btn-group filter dynamic-filter-toggle\">\n<button data-toggle=\"dropdown\" ng-class=\"class\" class=\"filter-dropdown btn dropdown-toggle\" aria-expanded=\"false\" id=\"btndropdown\">{{name}}<span class=\"hpe-icon hpe-down\"></span>\n</button>\n<ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"btndropdown\" ng-if=\"!showListControl\">\n<filter-option ng-if=\"dynamicOptions.options[0]\" name=\"dynamicOptions.options[0].name\" select=\"dynamicOptions.options[0].select()\" default=\"dynamicOptions.options[0].default\"></filter-option>\n<filter-option ng-repeat=\"option in dynamicOptions.fixedOptions\" name=\"option.name\" select=\"option.select()\" default=\"option.default\"></filter-option>\n<filter-option ng-repeat=\"option in dynamicOptions.options\" ng-if=\"!$first\" name=\"option.name\" select=\"option.select()\" default=\"option.default\"></filter-option>\n</ul>\n<ul class=\"dropdown-menu dynamic-filter\" role=\"menu\" aria-labelledby=\"btndropdown\" ng-if=\"showListControl\" ng-click=\"$event.preventDefault(); $event.stopImmediatePropagation();\">\n<li class=\"default-container\">\n<filter-option name=\"dynamicOptions.options[0].name\" select=\"dynamicOptions.options[0].select()\" default=\"dynamicOptions.options[0].default\" ng-click=\"fc.clearDynamic()\"></filter-option>\n<filter-option ng-repeat=\"option in dynamicOptions.fixedOptions\" name=\"option.name\" select=\"option.select()\" default=\"option.default\" ng-click=\"fc.clearDynamic()\">\n</filter-option>\n</li>\n<li ng-if=\"dynamicSelected.name\" id=\"dynamic-filter\">\n<a href=\"\" target=\"_blank\" ng-click=\"dynamicSelected.name.select(); fc.dismiss();\">\n<i class=\"hpe-icon hpe-checkmark\"></i>\n<span>{{dynamicSelected.name}}</span>\n</a>\n</li>\n<li class=\"input-container\">\n<input placeholder=\"Find {{ type }}...\" type=\"text\" ng-model=\"dynamicTypeaheadSelected.text\" typeahead=\"option as option.name for option in dynamicOptions.options | filter:$viewValue | limitTo:maxDisplayableItems\" ng-change=\"fc.dynamicTypeaheadOnChange()\" typeahead-min-length=\"minCharsForTypeAhead\" typeahead-on-select=\"fc.dynamicFilterSelected($item, $model, $label)\" class=\"form-control\">\n</li>\n</ul>\n</div>\n";
+var id1="filters/filter/filterOptions.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -31896,8 +31896,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<div ng-show=\"pp.previewOn\" class=\"p-nil\">\n<div class=\"hpebox\" ng-show=\"previewFile\">\n<div class=\"hpebox-content\">\n<div ng-if=\"previewTitle || previewSubtitle\" ng-class=\"{'preview-pane-shadow': shadow==true}\">\n<div ng-if=\"previewTitle\">\n<h2 class=\"m-b-nil\" ng-bind=\"previewTitle\"></h2>\n</div>\n<div ng-if=\"previewSubtitle\">\n<small class=\"text-muted\" ng-bind=\"previewSubtitle\"></small>\n</div>\n</div>\n<div class=\"preview-pane-right p-md scroll-cardview\" scroll-config=\"::{autoReinitialise: true, autoReinitialiseDelay:100, showOnlyOnHover:true, enableKeyboardNavigation:true, initialDelay :0} \" scroll-pane id=\"previewPaneScroll\">\n<div class=\"previewFile\"></div>\n</div>\n</div>\n</div>\n<div ng-show=\"!previewFile\" class=\"no-preview-pane-right p-md\">\n<div class=\"preview-no-record\">\n<i class=\"hpe-icon hpe-document\"></i>\n<h2 ng-bind=\"previewEmptyText\"></h2>\n</div>\n</div>\n</div>\n";
-var id1="previewPanes/previewPane/previewPane.html";
+var v1="<button class=\"btn btn-icon btn-white\" aria-label=\"{{ariaLabel}}\">\n<i ng-if=\"!setPreview\" class=\"hpe-icon hpe-divide-right\" aria-hidden=\"true\"></i>\n<i ng-if=\"setPreview\" class=\"hpe-icon hpe-checkbox\" aria-hidden=\"true\"></i>\n</button>\n";
+var id1="previewPanes/previewPaneToggle/previewPaneToggle.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -31910,8 +31910,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<button class=\"btn btn-icon btn-white\" aria-label=\"{{ariaLabel}}\">\n<i ng-if=\"!setPreview\" class=\"hpe-icon hpe-divide-right\" aria-hidden=\"true\"></i>\n<i ng-if=\"setPreview\" class=\"hpe-icon hpe-checkbox\" aria-hidden=\"true\"></i>\n</button>\n";
-var id1="previewPanes/previewPaneToggle/previewPaneToggle.html";
+var v1="<div ng-show=\"pp.previewOn\" class=\"p-nil\">\n<div class=\"hpebox\" ng-show=\"previewFile\">\n<div class=\"hpebox-content\">\n<div ng-if=\"previewTitle || previewSubtitle\" ng-class=\"{'preview-pane-shadow': shadow==true}\">\n<div ng-if=\"previewTitle\">\n<h2 class=\"m-b-nil\" ng-bind=\"previewTitle\"></h2>\n</div>\n<div ng-if=\"previewSubtitle\">\n<small class=\"text-muted\" ng-bind=\"previewSubtitle\"></small>\n</div>\n</div>\n<div class=\"preview-pane-right p-md scroll-cardview\" scroll-config=\"::{autoReinitialise: true, autoReinitialiseDelay:100, showOnlyOnHover:true, enableKeyboardNavigation:true, initialDelay :0} \" scroll-pane id=\"previewPaneScroll\">\n<div class=\"previewFile\"></div>\n</div>\n</div>\n</div>\n<div ng-show=\"!previewFile\" class=\"no-preview-pane-right p-md\">\n<div class=\"preview-no-record\">\n<i class=\"hpe-icon hpe-document\"></i>\n<h2 ng-bind=\"previewEmptyText\"></h2>\n</div>\n</div>\n</div>\n";
+var id1="previewPanes/previewPane/previewPane.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -32064,8 +32064,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<div class=\"slider\">\n<div class=\"track\" ng-class=\"vm.options.track.height\">\n<div class=\"track-section track-lower\" ng-style=\"{ 'flex-grow': vm.trackSizes.lower, 'background': vm.trackColors.lower }\">\n</div>\n<div class=\"thumb lower\" ng-style=\"{ 'left': vm.thumbPositions.lower, 'z-index': vm.thumbOrder.lower }\" ng-class=\"[vm.options.handles.style, vm.options.track.height]\" ng-mouseenter=\"vm.lowerThumbState.hover = true\" ng-mouseleave=\"vm.lowerThumbState.hover = false\">\n<div class=\"tooltip top tooltip-lower\" ng-style=\"{ 'opacity': vm.tooltipLowerVisible ? 1 : 0 }\">\n<div class=\"tooltip-arrow\" ng-style=\"{'border-top-color': vm.options.handles.callout.background }\">\n</div>\n<div class=\"tooltip-inner\" ng-style=\"{ 'background-color': vm.options.handles.callout.background, 'color': vm.options.handles.callout.color }\" ng-bind=\"vm.options.handles.callout.formatter(vm.thumbLowerValue)\">\n</div>\n</div>\n</div>\n<div class=\"track-section track-range\" ng-show=\"vm.options.type === 'range'\" ng-style=\"{ 'flex-grow': vm.trackSizes.range, 'background': vm.trackColors.range }\">\n</div>\n<div class=\"thumb upper\" ng-show=\"vm.options.type === 'range'\" ng-style=\"{ 'left': vm.thumbPositions.upper, 'z-index': vm.thumbOrder.upper }\" ng-class=\"[vm.options.handles.style, vm.options.track.height]\" ng-mouseenter=\"vm.upperThumbState.hover = true\" ng-mouseleave=\"vm.upperThumbState.hover = false\">\n<div class=\"tooltip top tooltip-upper\" ng-style=\"{ 'opacity': vm.tooltipUpperVisible ? 1 : 0 }\">\n<div class=\"tooltip-arrow\" ng-style=\"{'border-top-color': vm.options.handles.callout.background }\">\n</div>\n<div class=\"tooltip-inner\" ng-if=\"vm.options.type === 'range'\" ng-style=\"{ 'background-color': vm.options.handles.callout.background, 'color': vm.options.handles.callout.color }\" ng-bind=\"vm.options.handles.callout.formatter(vm.thumbUpperValue)\">\n</div>\n</div>\n</div>\n<div class=\"track-section track-higher\" ng-style=\"{ 'flex-grow': vm.trackSizes.higher, 'background': vm.trackColors.higher }\">\n</div>\n</div>\n<div class=\"tick-container\" ng-if=\"vm.options.track.ticks.major.show || vm.options.track.ticks.minor.show\" ng-class=\"{ 'show-labels': vm.options.track.ticks.major.labels || vm.options.track.ticks.minor.labels }\">\n<div class=\"tick\" ng-repeat=\"tick in vm.ticks\" ng-class=\"::tick.type\" ng-style=\"::{ 'left': tick.position + '%' }\" ng-show=\"::tick.showTicks\">\n<div class=\"tick-indicator\"></div>\n<div class=\"tick-label\" ng-show=\"::tick.showLabels\" ng-bind=\"::tick.label\"></div>\n</div>\n</div>\n</div>";
-var id1="directives/slider/slider.html";
+var v1="<div class=\"slider-chart\">\n<div class=\"flot-chart\">\n<flot dataset=\"vm.chartData\" options=\"vm.chartOptions\"></flot>\n<div class=\"track\">\n<div class=\"left-overlay\" ng-style=\"{'flex-grow': vm.left}\" ng-class=\"{'hide-left-border': vm.hideLeftBorder}\"></div>\n<div class=\"middle-overlay\" ng-style=\"{'flex-grow': vm.middle}\"></div>\n<div class=\"right-overlay\" ng-style=\"{'flex-grow': vm.right}\" ng-class=\"{'hide-right-border': vm.hideRightBorder}\"></div>\n</div>\n</div>\n<slider ng-model=\"vm.ngModel\" options=\"vm.sliderOptions\"></slider>\n</div> ";
+var id1="directives/sliderChart/sliderChart.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -32078,8 +32078,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<div class=\"slider-chart\">\n<div class=\"flot-chart\">\n<flot dataset=\"vm.chartData\" options=\"vm.chartOptions\"></flot>\n<div class=\"track\">\n<div class=\"left-overlay\" ng-style=\"{'flex-grow': vm.left}\" ng-class=\"{'hide-left-border': vm.hideLeftBorder}\"></div>\n<div class=\"middle-overlay\" ng-style=\"{'flex-grow': vm.middle}\"></div>\n<div class=\"right-overlay\" ng-style=\"{'flex-grow': vm.right}\" ng-class=\"{'hide-right-border': vm.hideRightBorder}\"></div>\n</div>\n</div>\n<slider ng-model=\"vm.ngModel\" options=\"vm.sliderOptions\"></slider>\n</div> ";
-var id1="directives/sliderChart/sliderChart.html";
+var v1="<div class=\"slider\">\n<div class=\"track\" ng-class=\"vm.options.track.height\">\n<div class=\"track-section track-lower\" ng-style=\"{ 'flex-grow': vm.trackSizes.lower, 'background': vm.trackColors.lower }\">\n</div>\n<div class=\"thumb lower\" ng-style=\"{ 'left': vm.thumbPositions.lower, 'z-index': vm.thumbOrder.lower }\" ng-class=\"[vm.options.handles.style, vm.options.track.height]\" ng-mouseenter=\"vm.lowerThumbState.hover = true\" ng-mouseleave=\"vm.lowerThumbState.hover = false\">\n<div class=\"tooltip top tooltip-lower\" ng-style=\"{ 'opacity': vm.tooltipLowerVisible ? 1 : 0 }\">\n<div class=\"tooltip-arrow\" ng-style=\"{'border-top-color': vm.options.handles.callout.background }\">\n</div>\n<div class=\"tooltip-inner\" ng-style=\"{ 'background-color': vm.options.handles.callout.background, 'color': vm.options.handles.callout.color }\" ng-bind=\"vm.options.handles.callout.formatter(vm.thumbLowerValue)\">\n</div>\n</div>\n</div>\n<div class=\"track-section track-range\" ng-show=\"vm.options.type === 'range'\" ng-style=\"{ 'flex-grow': vm.trackSizes.range, 'background': vm.trackColors.range }\">\n</div>\n<div class=\"thumb upper\" ng-show=\"vm.options.type === 'range'\" ng-style=\"{ 'left': vm.thumbPositions.upper, 'z-index': vm.thumbOrder.upper }\" ng-class=\"[vm.options.handles.style, vm.options.track.height]\" ng-mouseenter=\"vm.upperThumbState.hover = true\" ng-mouseleave=\"vm.upperThumbState.hover = false\">\n<div class=\"tooltip top tooltip-upper\" ng-style=\"{ 'opacity': vm.tooltipUpperVisible ? 1 : 0 }\">\n<div class=\"tooltip-arrow\" ng-style=\"{'border-top-color': vm.options.handles.callout.background }\">\n</div>\n<div class=\"tooltip-inner\" ng-if=\"vm.options.type === 'range'\" ng-style=\"{ 'background-color': vm.options.handles.callout.background, 'color': vm.options.handles.callout.color }\" ng-bind=\"vm.options.handles.callout.formatter(vm.thumbUpperValue)\">\n</div>\n</div>\n</div>\n<div class=\"track-section track-higher\" ng-style=\"{ 'flex-grow': vm.trackSizes.higher, 'background': vm.trackColors.higher }\">\n</div>\n</div>\n<div class=\"tick-container\" ng-if=\"vm.options.track.ticks.major.show || vm.options.track.ticks.minor.show\" ng-class=\"{ 'show-labels': vm.options.track.ticks.major.labels || vm.options.track.ticks.minor.labels }\">\n<div class=\"tick\" ng-repeat=\"tick in vm.ticks\" ng-class=\"::tick.type\" ng-style=\"::{ 'left': tick.position + '%' }\" ng-show=\"::tick.showTicks\">\n<div class=\"tick-indicator\"></div>\n<div class=\"tick-label\" ng-show=\"::tick.showLabels\" ng-bind=\"::tick.label\"></div>\n</div>\n</div>\n</div>";
+var id1="directives/slider/slider.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -32148,8 +32148,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<span class=\"sorter-container\">\n<span class=\"sorter-title\" ng-bind=\"sorterTitle\"></span>\n<div class=\"btn-group filter\">\n<button data-toggle=\"dropdown\" ng-class=\"class\" class=\"filter-dropdown btn dropdown-toggle\" aria-expanded=\"false\" id=\"btndropdown\">{{name}}<span class=\"hpe-icon hpe-down\"></span>\n</button>\n<ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"btndropdown\" ng-transclude></ul>\n</div>\n</span>";
-var id1="sorters/sorter/sorter.html";
+var v1="<th ng-repeat=\"header in vm.headers\" class=\"{{ ::header.fixedClass }}\" ng-class=\"{ 'text-center': header.center, 'clickable': header.sortable }\" ng-click=\"vm.select(header)\">\n<p class=\"sortableHeader\" ng-bind=\"header.sorterHeader\" ng-style=\"{ width: vm.getIcon(header) == 'ng-hide' ? '100%' : 'calc(100% - 18px)' }\"></p>\n<i class=\"hpe-icon text-muted sortableHeaderIcon\" ng-class=\"vm.getIcon(header)\"></i>\n</th>";
+var id1="sorters/sorterHeader/sortableHeader.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -32162,8 +32162,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<th ng-repeat=\"header in vm.headers\" class=\"{{ ::header.fixedClass }}\" ng-class=\"{ 'text-center': header.center, 'clickable': header.sortable }\" ng-click=\"vm.select(header)\">\n<p class=\"sortableHeader\" ng-bind=\"header.sorterHeader\" ng-style=\"{ width: vm.getIcon(header) == 'ng-hide' ? '100%' : 'calc(100% - 18px)' }\"></p>\n<i class=\"hpe-icon text-muted sortableHeaderIcon\" ng-class=\"vm.getIcon(header)\"></i>\n</th>";
-var id1="sorters/sorterHeader/sortableHeader.html";
+var v1="<li>\n<a href=\"\" target=\"_blank\" ng-click=\"soc.select()\">\n<i ng-class=\"{invisible: !selectedClass}\" class=\"hpe-icon hpe-checkmark sorter-icon\"></i>\n<p class=\"sorter-text\"><span ng-bind=\"soc.name\"></span></p>\n<i class=\"sorter-icon\" ng-class=\"iconClass\"></i>\n</a>\n</li>\n";
+var id1="sorters/sorterOption/sorterOption.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -32176,8 +32176,8 @@ module.exports=v1;
 var angular=window.angular,ngModule;
 try {ngModule=angular.module(["ng"])}
 catch(e){ngModule=angular.module("ng",[])}
-var v1="<li>\n<a href=\"\" target=\"_blank\" ng-click=\"soc.select()\">\n<i ng-class=\"{invisible: !selectedClass}\" class=\"hpe-icon hpe-checkmark sorter-icon\"></i>\n<p class=\"sorter-text\"><span ng-bind=\"soc.name\"></span></p>\n<i class=\"sorter-icon\" ng-class=\"iconClass\"></i>\n</a>\n</li>\n";
-var id1="sorters/sorterOption/sorterOption.html";
+var v1="<span class=\"sorter-container\">\n<span class=\"sorter-title\" ng-bind=\"sorterTitle\"></span>\n<div class=\"btn-group filter\">\n<button data-toggle=\"dropdown\" ng-class=\"class\" class=\"filter-dropdown btn dropdown-toggle\" aria-expanded=\"false\" id=\"btndropdown\">{{name}}<span class=\"hpe-icon hpe-down\"></span>\n</button>\n<ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"btndropdown\" ng-transclude></ul>\n</div>\n</span>";
+var id1="sorters/sorter/sorter.html";
 var inj=angular.element(window.document).injector();
 if(inj){inj.get("$templateCache").put(id1,v1);}
 else{ngModule.run(["$templateCache",function(c){c.put(id1,v1)}]);}
@@ -33051,8 +33051,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__plugins_jquery_validation_jquery_validation_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18__plugins_jquery_validation_jquery_validation_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__directives_affixElement_affixElement_module_js__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__directives_applicationSwitcher_applicationSwitcher_module_js__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__directives_backButton_backButton_module_js__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__directives_backButtonHeader_backButtonHeader_module_js__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__directives_backButton_backButton_module_js__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__directives_backButtonHeader_backButtonHeader_module_js__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__directives_cardTabs_cardTabs_module_js__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__directives_checkbox_checkbox_module_js__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__directives_componentList_componentList_module_js__ = __webpack_require__(30);
@@ -33115,8 +33115,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_82__directives_sideInset_sideInset_module_js__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_83__directives_sideModal_sideModal_module_js__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_84__directives_sideNavigation_sideNavigation_module_js__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_85__directives_slider_slider_module_js__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_86__directives_sliderChart_sliderChart_module_js__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_85__directives_slider_slider_module_js__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_86__directives_sliderChart_sliderChart_module_js__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_87__directives_socialChart_socialChart_module_js__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_88__directives_sorters_sorters_module_js__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_89__directives_spark_spark_module_js__ = __webpack_require__(93);

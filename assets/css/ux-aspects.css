@@ -3424,7 +3424,7 @@ select.form-control {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
 }
 .datepicker table tr th,
 .datepicker table tr td {
@@ -15274,6 +15274,7 @@ form .button-primary.disabled {
 .el-toggleswitch-label {
   margin-bottom: 5px;
   white-space: nowrap;
+  line-height: 0;
 }
 .el-checkbox-label .el-checkbox,
 .el-radiobutton-label .el-checkbox,
@@ -15331,7 +15332,7 @@ form .button-primary.disabled {
 .el-checkbox-label .el-radiobutton.disabled,
 .el-radiobutton-label .el-radiobutton.disabled,
 .el-toggleswitch-label .el-radiobutton.disabled {
-  border-color: #e4e4e4;
+  border-color: #eeeeee;
 }
 .el-checkbox-label .el-checkbox.disabled.checked,
 .el-radiobutton-label .el-checkbox.disabled.checked,
@@ -15345,7 +15346,7 @@ form .button-primary.disabled {
 .el-checkbox-label .el-radiobutton.disabled.indeterminate,
 .el-radiobutton-label .el-radiobutton.disabled.indeterminate,
 .el-toggleswitch-label .el-radiobutton.disabled.indeterminate {
-  background-color: #e4e4e4;
+  background-color: #eeeeee;
 }
 .el-checkbox-label .el-checkbox,
 .el-radiobutton-label .el-checkbox,
@@ -15600,6 +15601,7 @@ form .button-primary.disabled {
   margin-top: 1px;
   white-space: normal;
   vertical-align: top;
+  line-height: 22px;
 }
 .toggleswitch-lg .el-toggleswitch {
   width: 60px;
