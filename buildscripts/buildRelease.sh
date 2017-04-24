@@ -38,8 +38,8 @@ docker_image_build()
         cd $WORKSPACE/docker
         echo Building the image
         docker build -t $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST \
-            --build-arg http_proxy \
-            --build-arg https_proxy \
+            --build-arg http_proxy=$HttpProxy \
+            --build-arg https_proxy=$HttpsProxy \
             --build-arg no_proxy="localhost, 127.0.0.1" \
             --no-cache .
         DOCKER_IMAGE_ID=`docker images | grep $UX_ASPECTS_BUILD_IMAGE_NAME | grep $UX_ASPECTS_BUILD_IMAGE_TAG_LATEST | awk '{print $3}'`
