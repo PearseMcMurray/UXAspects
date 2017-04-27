@@ -102,7 +102,7 @@ echo "<h2>" >> UXAspectsTestsResults.html
 date -u >> UXAspectsTestsResults.html
 echo "</h2></br>" >> UXAspectsTestsResults.html
 
-if [ "$RunTests" == "true" ]; then
+# if [ "$RunTests" == "true" ]; then
 	# # The repository will have been synced to the build slave. Copy it to the UXAspectsTestsReleaseBuild
 	# # folder on the Selenium Grid Hub machine.
 	# cd $WORKSPACE
@@ -112,7 +112,7 @@ if [ "$RunTests" == "true" ]; then
 	# echo Copying repository to the Selenium Grid Hub machine
 	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p /home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects
 	# scp -r . $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:/home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects
-fi
+# fi
 
 # Create the latest ux-aspects-build image if it does not exist
 docker_image_build; echo
