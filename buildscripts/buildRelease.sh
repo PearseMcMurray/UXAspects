@@ -2,6 +2,7 @@
 set -e
 
 SELENIUM_TEST_MACHINE_USER=UXAspectsTestUser
+REMOTE_FOLDER=/home/$SELENIUM_TEST_MACHINE_USER/UXAspectsTestsReleaseBuild
 
 UX_ASPECTS_BUILD_IMAGE_NAME=ux-aspects-build
 UX_ASPECTS_BUILD_IMAGE_TAG_LATEST=0.9.0
@@ -107,11 +108,11 @@ echo "</h2></br>" >> UXAspectsTestsResults.html
 	# # folder on the Selenium Grid Hub machine.
 	# cd $WORKSPACE
 	# echo Deleting old copy of repository on Selenium Grid Hub machine
-	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf /home/UXAspectsTestUser/UXAspectsTestsReleaseBuild
+	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf $REMOTE_FOLDER
 
 	# echo Copying repository to the Selenium Grid Hub machine
-	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p /home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects
-	# scp -r . $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:/home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects
+	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p $REMOTE_FOLDER/ux-aspects
+	# scp -r . $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_FOLDER/ux-aspects
 # fi
 
 # Create the latest ux-aspects-build image if it does not exist
@@ -130,7 +131,9 @@ if [ "$RunTests" == "true" ]; then
 	# while read line ; do
 		# echo "<p><span class=rvts6>$line</span></p>" >> UXAspectsTestsResults.html
 	# done < UnitTestResults.txt
+	# sed -i 's/\[1m//g' UXAspectsTestsResults.html
 	# sed -i 's/\[4m//g' UXAspectsTestsResults.html
+	# sed -i 's/\[22m//g' UXAspectsTestsResults.html
 	# sed -i 's/\[24m//g' UXAspectsTestsResults.html
 	# sed -i 's/\[31m//g' UXAspectsTestsResults.html
 	# sed -i 's/\[32m//g' UXAspectsTestsResults.html
@@ -156,14 +159,13 @@ if [ "$RunTests" == "true" ]; then
 	echo
 	echo Executing the Selenium tests
 	cd $WORKSPACE
-	rm -rf emailable-report.html
-	rm -rf testng-results.xml
-	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress bash /home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects/buildscripts/executeSeleniumTestsReleaseBuild.sh
+	# rm -rf emailable-report.html
+	# rm -rf testng-results.xml
+	
+	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress bash $REMOTE_FOLDER/ux-aspects/buildscripts/executeSeleniumTestsReleaseBuild.sh
 	# Copy two results files, one HTML and one XML, created on the remote machine
-	scp $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:/home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects/\
-	target/surefire-reports/emailable-report.html .
-	scp $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:/home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects/\
-	target/surefire-reports/testng-results.xml .
+	scp $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_FOLDER/ux-aspects/target/surefire-reports/emailable-report.html .
+	scp $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_FOLDER/ux-aspects/target/surefire-reports/testng-results.xml .
 
 	# Split the new Selenium tests results file at the <body> tag. Copy everything after that point to our results file.
 	echo Adding Selenium test results to the results file
