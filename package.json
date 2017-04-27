@@ -1,6 +1,6 @@
 {
   "name": "ux-aspects",
-  "version": "1.0.0",
+  "version": "1.1.0-beta.1",
   "description": "Open source user interface framework for building modern, responsive, mobile big data applications",
   "main": "src/index.ts",
   "author": "Ashley Hunter",
@@ -34,7 +34,7 @@
     "prismjs": "^1.6.0",
     "rxjs": "^5.3.0",
     "source-sans-pro": "^2.0.10",
-    "zone.js": "0.8.8",
+    "zone.js": "0.8.9",
     "less": "^2.7.2"
   },
   "devDependencies": {
