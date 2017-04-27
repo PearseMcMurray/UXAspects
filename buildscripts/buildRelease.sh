@@ -40,13 +40,8 @@ docker_image_build()
         cd $WORKSPACE/docker
         echo Building the image
         docker build -t $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST \
-<<<<<<< HEAD
-            --build-arg http_proxy=$http_proxy \
-            --build-arg https_proxy=$https_proxy \
-=======
             --build-arg http_proxy=$HttpProxy \
             --build-arg https_proxy=$HttpsProxy \
->>>>>>> upstream/develop
             --build-arg no_proxy="localhost, 127.0.0.1" \
             --no-cache .
         DOCKER_IMAGE_ID=`docker images | grep $UX_ASPECTS_BUILD_IMAGE_NAME | grep $UX_ASPECTS_BUILD_IMAGE_TAG_LATEST | awk '{print $3}'`
@@ -126,7 +121,7 @@ if [ "$RunTests" == "true" ]; then
 	echo Executing the unit tests in the $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST container
 	cd $WORKSPACE
 	chmod a+rw .
-	DOCKER_BUILD bash buildscripts/executeUnitTestsDocker.sh
+	docker_image_run bash buildscripts/executeUnitTestsDocker.sh
 
 	# The unit tests results file, UnitTestResults.txt, should have been created in this folder. Copy it to our results file and
 	# remove unwanted strings.
@@ -223,6 +218,16 @@ if [ "$BuildPackages" != "true" ] && [ "$BuildDocumentation" != "true" ]; then
 	echo "Nothing to build - exiting"
 	exit 0;
 fi
+
+
+
+
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+echo "Exiting early!"
+exit 0;
+
+
+
 
 # Perform the build
 echo Both sets of tests passed. Performing the build.
@@ -369,42 +374,6 @@ rm -rf dist
 docker_image_run grunt build --force
 
 # Archive the Keppel-themed documentation files
-<<<<<<< HEAD
-echo
-echo Archiving the Keppel-themed documentation files
-mv dist/docs docs-gh-pages-Keppel-$NextVersion
-cd docs-gh-pages-Keppel-$NextVersion
-tarDocs=`tar czvf ../$NextVersion-docs-gh-pages-Keppel.tar.gz *`
-echo "$tarDocs"
-cd ..
-
-# Create a branch for the new documentation. First, clone the repository to a sub-folder.
-# Switching to the new branch and commiting to it will be performed in this clone.
-echo
-echo Creating the branch $NextVersion-gh-pages-test
-cd $WORKSPACE
-mkdir gh-pages-clone
-cd gh-pages-clone
-git clone git@github.com:UXAspects/UXAspects.git
-cd UXAspects
-git checkout gh-pages
-git checkout -b $NextVersion-gh-pages-test
-git push origin $NextVersion-gh-pages-test
-
-# Delete existing files
-echo
-echo Deleting existing files
-rm -rf assets/ docs/ modules/ showcase/
-rm -f *.css *.html *.js *.ico *.log
-
-# Extract the files from the Keppel documentation archive, both to this folder and to a $NextVersion sub-directory
-echo
-echo Extracting the archived Keppel-themed documentation to this folder and to a numbered sub-directory
-tar xvf $WORKSPACE/$NextVersion-docs-gh-pages-Keppel.tar.gz
-if [ -d "$NextVersion" ]; then
-    echo "Folder $NextVersion exists... deleting it!"
-    rm -rf $NextVersion
-=======
 if [ "$BuildDocumentation" == "true" ]; then
 	echo
 	echo Archiving the Keppel-themed documentation files
@@ -451,7 +420,6 @@ if [ "$BuildDocumentation" == "true" ]; then
 	git add $NextVersion/ assets/ docs/ modules/ showcase/ *.css *.html *.ico *.js
 	git commit -a -m "Committing documentation changes for $NextVersion-gh-pages-test. Latest commit ID is $latestCommitID."
 	git push origin $NextVersion-gh-pages-test
->>>>>>> upstream/develop
 fi
 
 if [ "$BuildPackages" == "true" ]; then
@@ -481,44 +449,6 @@ if [ "$BuildPackages" == "true" ]; then
 	git push --set-upstream origin $NextVersion-package-test
 fi
 
-
-<<<<<<< HEAD
-
-
-
-
-# Create a branch for the new Keppel Bower package. First, clone the repository to a sub-folder.
-# Switching to the new branch and commiting to it will be performed in this clone.
-echo
-echo Creating the branch $NextVersion-package-test
-cd $WORKSPACE
-mkdir package-clone
-cd package-clone
-git clone git@github.com:UXAspects/UXAspects.git
-cd UXAspects
-git checkout bower
-git checkout -b $NextVersion-package-test
-git push origin $NextVersion-package-test
-
-# Remove existing files and copy the new package files
-rm -rf *
-cp -p -r $WORKSPACE/dist .
-cp -p $WORKSPACE/bower.json .
-
-# Push the new files to the branch
-echo
-echo Pushing the new files to the branch
-git add dist/ bower.json
-git commit -m "Committing changes for package $NextVersion-test. Latest commit ID is $latestCommitID."
-git push --set-upstream origin $NextVersion-package-test
-
-
-
-
-
-
-
-
 # Return to the develop branch and discard changes to a couple of files
 echo
 echo Returning to the develop branch
@@ -526,14 +456,4 @@ cd $WORKSPACE
 git checkout docs/app/data/footer-navigation.json
 git checkout docs/app/data/landing-page.json
 
-# Temporary commands to allow testing of Jenkins job prior to re-introduction of unit and Selenium tests.
-# Dummy results files will be copied into place.
-cd $WORKSPACE
-cp $WORKSPACE/buildscripts/emailable-report.html index.html
-cp $WORKSPACE/buildscripts/testng-results.xml .
-mkdir -p $WORKSPACE/reports
-cp index.html $WORKSPACE/reports/index.html
-
-=======
->>>>>>> upstream/develop
 exit 0
