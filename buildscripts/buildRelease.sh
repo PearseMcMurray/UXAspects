@@ -103,54 +103,54 @@ date -u >> UXAspectsTestsResults.html
 echo "</h2></br>" >> UXAspectsTestsResults.html
 
 if [ "$RunTests" == "true" ]; then
-	# The repository will have been synced to the build slave. Copy it to the UXAspectsTestsReleaseBuild
-	# folder on the Selenium Grid Hub machine.
-	cd $WORKSPACE
-	echo Deleting old copy of repository on Selenium Grid Hub machine
-	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf /home/UXAspectsTestUser/UXAspectsTestsReleaseBuild
+	# # The repository will have been synced to the build slave. Copy it to the UXAspectsTestsReleaseBuild
+	# # folder on the Selenium Grid Hub machine.
+	# cd $WORKSPACE
+	# echo Deleting old copy of repository on Selenium Grid Hub machine
+	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf /home/UXAspectsTestUser/UXAspectsTestsReleaseBuild
 
-	echo Copying repository to the Selenium Grid Hub machine
-	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p /home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects
-	scp -r . $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:/home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects
+	# echo Copying repository to the Selenium Grid Hub machine
+	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p /home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects
+	# scp -r . $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:/home/UXAspectsTestUser/UXAspectsTestsReleaseBuild/ux-aspects
 fi
 
 # Create the latest ux-aspects-build image if it does not exist
 docker_image_build; echo
 
 if [ "$RunTests" == "true" ]; then
-	echo Executing the unit tests in the $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST container
-	cd $WORKSPACE
-	chmod a+rw .
-	docker_image_run bash buildscripts/executeUnitTestsDocker.sh
+	# echo Executing the unit tests in the $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST container
+	# cd $WORKSPACE
+	# chmod a+rw .
+	# docker_image_run bash buildscripts/executeUnitTestsDocker.sh
 
-	# The unit tests results file, UnitTestResults.txt, should have been created in this folder. Copy it to our results file and
-	# remove unwanted strings.
-	echo Adding unit test results to the results file
-	echo "<h2>Unit Tests</h2>" >> UXAspectsTestsResults.html
-	while read line ; do
-		echo "<p><span class=rvts6>$line</span></p>" >> UXAspectsTestsResults.html
-	done < UnitTestResults.txt
-	sed -i 's/\[4m//g' UXAspectsTestsResults.html
-	sed -i 's/\[24m//g' UXAspectsTestsResults.html
-	sed -i 's/\[31m//g' UXAspectsTestsResults.html
-	sed -i 's/\[32m//g' UXAspectsTestsResults.html
-	sed -i 's/\[33m//g' UXAspectsTestsResults.html
-	sed -i 's/\[39m//g' UXAspectsTestsResults.html
-	sed -i 's/\r\n/\n/g' UXAspectsTestsResults.html
+	# # The unit tests results file, UnitTestResults.txt, should have been created in this folder. Copy it to our results file and
+	# # remove unwanted strings.
+	# echo Adding unit test results to the results file
+	# echo "<h2>Unit Tests</h2>" >> UXAspectsTestsResults.html
+	# while read line ; do
+		# echo "<p><span class=rvts6>$line</span></p>" >> UXAspectsTestsResults.html
+	# done < UnitTestResults.txt
+	# sed -i 's/\[4m//g' UXAspectsTestsResults.html
+	# sed -i 's/\[24m//g' UXAspectsTestsResults.html
+	# sed -i 's/\[31m//g' UXAspectsTestsResults.html
+	# sed -i 's/\[32m//g' UXAspectsTestsResults.html
+	# sed -i 's/\[33m//g' UXAspectsTestsResults.html
+	# sed -i 's/\[39m//g' UXAspectsTestsResults.html
+	# sed -i 's/\r\n/\n/g' UXAspectsTestsResults.html
 
-	# Test for success i.e. zero failures. If there were failures, complete the results file and exit with status 1.
-	if grep -q  ">> 0 failures" UnitTestResults.txt;
-	then
-		echo Unit tests passed
-	else
-		echo "Unit test(s) failed"
-		echo "</body></html>" >> UXAspectsTestsResults.html
-		cp UXAspectsTestsResults.html $WORKSPACE/index-${BUILD_NUMBER}.html
-		cp UXAspectsTestsResults.html $WORKSPACE/index.html
-		mkdir -p $WORKSPACE/reports
-		cp index.html $WORKSPACE/reports/index.html
-		exit 1
-	fi
+	# # Test for success i.e. zero failures. If there were failures, complete the results file and exit with status 1.
+	# if grep -q  ">> 0 failures" UnitTestResults.txt;
+	# then
+		# echo Unit tests passed
+	# else
+		# echo "Unit test(s) failed"
+		# echo "</body></html>" >> UXAspectsTestsResults.html
+		# cp UXAspectsTestsResults.html $WORKSPACE/index-${BUILD_NUMBER}.html
+		# cp UXAspectsTestsResults.html $WORKSPACE/index.html
+		# mkdir -p $WORKSPACE/reports
+		# cp index.html $WORKSPACE/reports/index.html
+		# exit 1
+	# fi
 
 	# Execute the Selenium tests on the remote machine
 	echo
