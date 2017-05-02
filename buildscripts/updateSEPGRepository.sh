@@ -18,9 +18,9 @@ echo latestCommitID is $latestCommitID
 
 clonePagesURL="git@github.hpe.com:sepg-docs-qa/"
 ghPagesCommitMessage="Build #$BUILD_NUM Commit $latestCommitID"
-docsTargetFolder="$WORKSPACE/ux-aspects/targetFolder" + "$1"
-gitPagesRepoName= "UXAspects_$1_Theme_CI"
-clonePagesURL = "https://github.hpe.com/sepg-docs-qa/JobService_REL_job-service.git" #clonePagesURL + gitPagesRepoName + ".git"
+docsTargetFolder="$WORKSPACE/ux-aspects/targetFolder$1"
+gitPagesRepoName="UXAspects_$1_Theme_CI"
+clonePagesURL="https://github.hpe.com/sepg-docs-qa/JobService_REL_job-service.git" #clonePagesURL + gitPagesRepoName + ".git"
 
 # Create target folder
 if [ -d "$docsTargetFolder" ]; then
