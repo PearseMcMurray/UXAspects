@@ -42,44 +42,29 @@ docker_image_build()
     fi
 }
 
-# Define a function to run a specified Docker image. The job's workspace will be mapped to /workspace in the container.
-# The container will run using the UID of the user executing the job.
-docker_image_run()
-{
-    DOCKER_IMAGE_ID=`docker images | grep $UX_ASPECTS_BUILD_IMAGE_NAME | grep $UX_ASPECTS_BUILD_IMAGE_TAG_LATEST | awk '{print $3}'`
-    echo ID for $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST image is $DOCKER_IMAGE_ID
-    if [ -z "$DOCKER_IMAGE_ID" ] ; then
-        echo Image $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST does not exist!
-    else
-        echo Calling docker run ... "$@"
-        docker run --rm --volume "$PWD":/workspace --workdir /workspace \
-		    --user $UID:$GROUPS $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST "$@"
-    fi
-}
-
 cd $WORKSPACE/ux-aspects
 
 # Create the latest elements-build image if it does not exist
-docker_image_build; echo
+#docker_image_build; echo
 
 # Build using the HPE theme
 echo Build using the HPE theme
-bash buildscripts/buildHPETheme.sh
+#bash buildscripts/buildHPETheme.sh
 echo
 
 # Build using the Keppel theme
 echo Build using the Keppel theme
-bash buildscripts/buildKeppelTheme.sh
+#bash buildscripts/buildKeppelTheme.sh
 echo
 
 # Update the HPE theme respository
 echo Update the HPE theme respository
-bash buildscripts/updateSEPGRepository.sh "HPE" "docs-gh-pages-HPE.tar.gz"
+#bash buildscripts/updateSEPGRepository.sh "HPE" "docs-gh-pages-HPE.tar.gz"
 echo
 
 # Update the Keppel theme respository
 echo Update the Keppel theme respository
-bash buildscripts/updateSEPGRepository.sh "Keppel" "docs-gh-pages-Keppel.tar.gz"
+#bash buildscripts/updateSEPGRepository.sh "Keppel" "docs-gh-pages-Keppel.tar.gz"
 echo
 
 exit 0;

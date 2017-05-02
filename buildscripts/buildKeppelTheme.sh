@@ -63,7 +63,7 @@ echo PWD is $PWD
 
 mv dist/docs docs-gh-pages-Keppel
 cd docs-gh-pages-Keppel
-#tarDocs=`tar czvf ../docs-gh-pages-Keppel.tar.gz *`
+tarDocs=`tar czvf ../docs-gh-pages-Keppel.tar.gz *`
 echo "$tarDocs"
 cd ..
 

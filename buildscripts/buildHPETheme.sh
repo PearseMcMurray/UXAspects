@@ -76,7 +76,7 @@ echo PWD is $PWD
 
 mv dist/docs docs-gh-pages-HPE
 cd docs-gh-pages-HPE
-#tarDocs=`tar -czvf ../docs-gh-pages-HPE.tar.gz *`
+tarDocs=`tar -czvf ../docs-gh-pages-HPE.tar.gz *`
 echo "$tarDocs"
 cd ..
 
