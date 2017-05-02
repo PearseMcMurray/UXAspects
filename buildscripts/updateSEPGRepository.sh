@@ -17,10 +17,10 @@ latestCommitID=`git rev-parse HEAD`
 echo latestCommitID is $latestCommitID
 
 clonePagesURL="git@github.hpe.com:sepg-docs-qa/"
-ghPagesCommitMessage="Build #" + $BUILD_NUM + " Commit $latestCommitID"
+ghPagesCommitMessage="Build #$BUILD_NUM Commit $latestCommitID"
 docsTargetFolder="$WORKSPACE/ux-aspects/targetFolder" + "$1"
-gitPagesRepoName= "UXAspects_" + $1 + "_Theme_CI"
-clonePagesURL = clonePagesURL + gitPagesRepoName + ".git"
+gitPagesRepoName= "UXAspects_$1_Theme_CI"
+clonePagesURL = "https://github.hpe.com/sepg-docs-qa/JobService_REL_job-service.git" #clonePagesURL + gitPagesRepoName + ".git"
 
 # Create target folder
 if [ -d "$docsTargetFolder" ]; then
@@ -32,8 +32,8 @@ cd $docsTargetFolder
 mkdir gh-pages
 cd gh-pages
 git clone -b gh-pages $clonePagesURL ./
-git rm -rf .
-tar zxvf $WORKSPACE/ux-aspects/$2 -C .
+#git rm -rf .
+#tar zxvf $WORKSPACE/ux-aspects/$2 -C .
 #git add .
 #git commit --allow-empty -m \"$ghPagesCommitMessage\"
 #git push origin
