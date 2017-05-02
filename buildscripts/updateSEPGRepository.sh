@@ -11,14 +11,14 @@ echo PWD is $PWD
 echo HOME is $HOME
 
 echo Moving to workspace
-cd $WORKSPACE
+cd $WORKSPACE/ux-aspects
 
 latestCommitID=`git rev-parse HEAD`
 echo latestCommitID is $latestCommitID
 
 clonePagesURL="git@github.hpe.com:sepg-docs-qa/"
 ghPagesCommitMessage="Build #" + $BUILD_NUM + " Commit $latestCommitID"
-docsTargetFolder="$WORKSPACE/targetFolder" + "$1"
+docsTargetFolder="$WORKSPACE/ux-aspects/targetFolder" + "$1"
 gitPagesRepoName= "UXAspects_" + $1 + "_Theme_CI"
 clonePagesURL = clonePagesURL + gitPagesRepoName + ".git"
 
@@ -33,9 +33,9 @@ mkdir gh-pages
 cd gh-pages
 git clone -b gh-pages $clonePagesURL ./
 git rm -rf .
-tar zxvf $WORKSPACE/$2 -C .
-git add .
-git commit --allow-empty -m \"$ghPagesCommitMessage\"
-git push origin
+tar zxvf $WORKSPACE/ux-aspects/$2 -C .
+#git add .
+#git commit --allow-empty -m \"$ghPagesCommitMessage\"
+#git push origin
 
 exit 0;

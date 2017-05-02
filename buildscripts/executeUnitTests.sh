@@ -64,22 +64,22 @@ docker_image_build; echo
 
 # Build using the HPE theme
 echo Build using the HPE theme
-bash ./buildHPETheme.sh
+bash buildscripts/buildHPETheme.sh
 echo
 
 # Build using the Keppel theme
 echo Build using the Keppel theme
-bash ./buildKeppelTheme.sh
+bash buildscripts/buildKeppelTheme.sh
 echo
 
 # Update the HPE theme respository
 echo Update the HPE theme respository
-#bash ./updateSEPGRepository.sh "HPE" "docs-gh-pages-HPE.tar.gz"
+bash buildscripts/updateSEPGRepository.sh "HPE" "docs-gh-pages-HPE.tar.gz"
 echo
 
 # Update the Keppel theme respository
 echo Update the Keppel theme respository
-#bash ./updateSEPGRepository.sh "Keppel" "docs-gh-pages-Keppel.tar.gz"
+bash buildscripts/updateSEPGRepository.sh "Keppel" "docs-gh-pages-Keppel.tar.gz"
 echo
 
 exit 0;

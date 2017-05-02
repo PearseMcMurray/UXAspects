@@ -14,7 +14,7 @@ echo PWD is $PWD
 echo HOME is $HOME
 
 echo Moving to workspace
-cd $WORKSPACE
+cd $WORKSPACE/ux-aspects
 
 # Define a function to run a specified Docker image. The job's workspace will be mapped to /workspace in the container.
 # The container will run using the UID of the user executing the job.
@@ -32,34 +32,35 @@ docker_image_run()
 }
 
 # Clean up previous builds
+cd $WORKSPACE/ux-aspects
 rm -f docs-gh-pages-HPE.tar.gz
 rm -rf docs-gh-pages-HPE
-rm -rf $WORKSPACE/KeppelThemeFiles
-rm -rf $WORKSPACE/HPEThemeFiles
+rm -rf KeppelThemeFiles
+rm -rf HPEThemeFiles
 
 # Take a copy of the files which will be overwritten by the HPE theme files
 echo
 echo Storing the Keppel theme files
-mkdir $WORKSPACE/KeppelThemeFiles
-cp -p -r $WORKSPACE/src/fonts $WORKSPACE/KeppelThemeFiles
-cp -p -r $WORKSPACE/src/img $WORKSPACE/KeppelThemeFiles
-cp -p -r $WORKSPACE/src/styles $WORKSPACE/KeppelThemeFiles
+mkdir KeppelThemeFiles
+cp -p -r src/fonts KeppelThemeFiles
+cp -p -r src/img KeppelThemeFiles
+cp -p -r src/styles KeppelThemeFiles
 
 # Get the HPE theme files and copy them onto the source hierarchy
 echo
 echo Getting the HPE theme files
-mkdir $WORKSPACE/HPEThemeFiles
-cd $WORKSPACE/HPEThemeFiles
+mkdir HPEThemeFiles
+cd HPEThemeFiles
 curl -L -S -s https://github.hpe.com/caf/ux-aspects-hpe/archive/master.zip > HPETheme.zip
 unzip -o HPETheme.zip
-cp -p -r ux-aspects-hpe-master/fonts $WORKSPACE/src
-cp -p -r ux-aspects-hpe-master/img $WORKSPACE/src
-cp -p -r ux-aspects-hpe-master/styles $WORKSPACE/src
+cp -p -r ux-aspects-hpe-master/fonts ../src
+cp -p -r ux-aspects-hpe-master/img ../src
+cp -p -r ux-aspects-hpe-master/styles ../src
 
 # Build using the HPE theme
 echo
 echo Building using the HPE theme
-cd $WORKSPACE
+cd ..
 echo Run npm install
 docker_image_run npm install
 echo Building

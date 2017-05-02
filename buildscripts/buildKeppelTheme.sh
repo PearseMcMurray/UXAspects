@@ -14,7 +14,7 @@ echo PWD is $PWD
 echo HOME is $HOME
 
 echo Moving to workspace
-cd $WORKSPACE
+cd $WORKSPACE/ux-aspects
 
 # Define a function to run a specified Docker image. The job's workspace will be mapped to /workspace in the container.
 # The container will run using the UID of the user executing the job.
@@ -32,26 +32,25 @@ docker_image_run()
 }
 
 # Clean up previous builds
+cd $WORKSPACE/ux-aspects
 rm -f docs-gh-pages-Keppel.tar.gz
 rm -rf docs-gh-pages-Keppel
 
 # Remove the HPE theme files
 echo
 echo Deleting the HPE theme files
-cd $WORKSPACE
-rm -rf $WORKSPACE/src/fonts
-rm -rf $WORKSPACE/src/img
-rm -rf $WORKSPACE/src/styles
+rm -rf src/fonts
+rm -rf src/img
+rm -rf src/styles
 
 # Copy back the Keppel theme files
 echo
 echo Restoring the Keppel theme files
-cp -p -r $WORKSPACE/KeppelThemeFiles/* $WORKSPACE/src
+cp -p -r KeppelThemeFiles/* src
 
 # Build using the Keppel theme
 echo
 echo Building using the Keppel theme
-cd $WORKSPACE
 docker_image_run grunt clean
 rm -rf dist
 docker_image_run grunt build --force
