@@ -3,6 +3,7 @@ set -e
 
 SELENIUM_TEST_MACHINE_USER=UXAspectsTestUser
 REMOTE_FOLDER=/home/$SELENIUM_TEST_MACHINE_USER/UXAspectsTestsReleaseBuild
+REMOTE_NPM_PACKAGE_FOLDER=/home/$SELENIUM_TEST_MACHINE_USER/npm
 
 UX_ASPECTS_BUILD_IMAGE_NAME=ux-aspects-build
 UX_ASPECTS_BUILD_IMAGE_TAG_LATEST=0.9.0
@@ -203,7 +204,7 @@ if [ "$RunTests" == "true" ]; then
 	fi
 fi
 
-# Create an empty results file if not tests were run
+# Create an empty results file if tests were not run
 if [ "$RunTests" != "true" ]; then
 	echo "No tests performed"	
 	echo "<h2>No tests performed</h2>" >> UXAspectsTestsResults.html
@@ -253,6 +254,17 @@ else
    exit 1
 fi
 
+# Bump up the version in the NPM package.json
+sed -i -e s/"\"version\": \"[0-9]\.[0-9]\.[0-9].*\","/"\"version\": \"$NextVersion\","/ "src/package.json"
+newNPMPackageVersion=`cat src/package.json | grep version`
+if [[ $newNPMPackageVersion == *"$NextVersion"* ]]
+then
+   echo "Updated NPM package.json with $NextVersion"
+else
+   echo "ERROR: NPM package.json isn't updated with $NextVersion"
+   exit 1
+fi
+
 # Update the version in footer-navigation.json and landing-page.json
 echo
 echo Updating the version in footer-navigation.json and landing-page.json
@@ -269,79 +281,79 @@ cp -p -r $WORKSPACE/src/fonts $WORKSPACE/KeppelThemeFiles
 cp -p -r $WORKSPACE/src/img $WORKSPACE/KeppelThemeFiles
 cp -p -r $WORKSPACE/src/styles $WORKSPACE/KeppelThemeFiles
 
-# Get the HPE theme files and copy them onto the source hierarchy
-echo
-echo Getting the HPE theme files
-mkdir $WORKSPACE/HPEThemeFiles
-cd $WORKSPACE/HPEThemeFiles
-curl -L -S -s https://github.hpe.com/caf/ux-aspects-hpe/archive/master.zip > HPETheme.zip
-unzip -o HPETheme.zip
-cp -p -r ux-aspects-hpe-master/fonts $WORKSPACE/src
-cp -p -r ux-aspects-hpe-master/img $WORKSPACE/src
-cp -p -r ux-aspects-hpe-master/styles $WORKSPACE/src
+# # Get the HPE theme files and copy them onto the source hierarchy
+# echo
+# echo Getting the HPE theme files
+# mkdir $WORKSPACE/HPEThemeFiles
+# cd $WORKSPACE/HPEThemeFiles
+# curl -L -S -s https://github.hpe.com/caf/ux-aspects-hpe/archive/master.zip > HPETheme.zip
+# unzip -o HPETheme.zip
+# cp -p -r ux-aspects-hpe-master/fonts $WORKSPACE/src
+# cp -p -r ux-aspects-hpe-master/img $WORKSPACE/src
+# cp -p -r ux-aspects-hpe-master/styles $WORKSPACE/src
 
-# Bump up the version in the HPE bower.json
-sed -i -e s/"\"version\": \"[0-9]\.[0-9]\.[0-9].*\","/"\"version\": \"$NextVersion\","/ "ux-aspects-hpe-master/bower.json"
-HPEBowerVersion=`cat ux-aspects-hpe-master/bower.json | grep version`
-if [[ $HPEBowerVersion == *"$NextVersion"* ]]
-then
-   echo "Updated HPE bower.json with $NextVersion"
-else
-   echo "ERROR: HPE bower.json isn't updated with $NextVersion"
-   exit 1
-fi
+# # Bump up the version in the HPE bower.json
+# sed -i -e s/"\"version\": \"[0-9]\.[0-9]\.[0-9].*\","/"\"version\": \"$NextVersion\","/ "ux-aspects-hpe-master/bower.json"
+# HPEBowerVersion=`cat ux-aspects-hpe-master/bower.json | grep version`
+# if [[ $HPEBowerVersion == *"$NextVersion"* ]]
+# then
+   # echo "Updated HPE bower.json with $NextVersion"
+# else
+   # echo "ERROR: HPE bower.json isn't updated with $NextVersion"
+   # exit 1
+# fi
 
-# Build using the HPE theme
-echo
-echo Building using the HPE theme
-cd $WORKSPACE
-echo Run npm install
+# # Build using the HPE theme
+# echo
+# echo Building using the HPE theme
+# cd $WORKSPACE
+# echo Run npm install
 docker_image_run npm install
-echo Building
-docker_image_run grunt clean
-docker_image_run grunt build --force
+# echo Building
+# docker_image_run grunt clean
+# docker_image_run grunt build --force
 
-# Archive the HPE-themed documentation files
-echo
-echo Archiving the HPE-themed documentation files
-mv dist/docs docs-gh-pages-HPE-$NextVersion
-cd docs-gh-pages-HPE-$NextVersion
-tarDocs=`tar -czvf ../$NextVersion-docs-gh-pages-HPE.tar.gz *`
-echo "$tarDocs"
-cd ..
+# # Archive the HPE-themed documentation files
+# echo
+# echo Archiving the HPE-themed documentation files
+# mv dist/docs docs-gh-pages-HPE-$NextVersion
+# cd docs-gh-pages-HPE-$NextVersion
+# tarDocs=`tar -czvf ../$NextVersion-docs-gh-pages-HPE.tar.gz *`
+# echo "$tarDocs"
+# cd ..
 
-# Create HPE Bower package tarball for Artifactory
-cd $WORKSPACE
-HPEPackage="${bowerName}-hpe_$NextVersion.tar.gz"
-echo
-echo Creating the HPE Bower package $HPEPackage
-rm -f $WORKSPACE/HPEThemeFiles/Package/$HPEPackage
-mkdir -p $WORKSPACE/HPEThemeFiles/Package/dist/css
-cp -p dist/styles/*.css $WORKSPACE/HPEThemeFiles/Package/dist/css
-cp -p -r $WORKSPACE/dist/fonts $WORKSPACE/HPEThemeFiles/Package/dist
-cp -p -r $WORKSPACE/dist/img $WORKSPACE/HPEThemeFiles/Package/dist
-cp -p -r $WORKSPACE/HPEThemeFiles/ux-aspects-hpe-master/fonts $WORKSPACE/HPEThemeFiles/Package/dist
-cp -p -r $WORKSPACE/HPEThemeFiles/ux-aspects-hpe-master/img $WORKSPACE/HPEThemeFiles/Package/dist
-cp -p -r $WORKSPACE/HPEThemeFiles/ux-aspects-hpe-master/styles $WORKSPACE/HPEThemeFiles/Package/dist
-cp -p -r $WORKSPACE/HPEThemeFiles/ux-aspects-hpe-master/bower.json $WORKSPACE/HPEThemeFiles/Package
-cd $WORKSPACE/HPEThemeFiles/Package
-tar czvf $HPEPackage dist bower.json
-if [ "$?" -eq 0 ]
-then
-    echo "Package $HPEPackage was Successfully created"
-    ls -la "$WORKSPACE/HPEThemeFiles/Package/$HPEPackage"
-else
-    echo "Error: Creating package $HPEPackage"
-fi
+# # Create HPE Bower package tarball for Artifactory
+# cd $WORKSPACE
+# HPEPackage="${bowerName}-hpe_$NextVersion.tar.gz"
+# echo
+# echo Creating the HPE Bower package $HPEPackage
+# rm -f $WORKSPACE/HPEThemeFiles/Package/$HPEPackage
+# mkdir -p $WORKSPACE/HPEThemeFiles/Package/dist/css
+# cp -p dist/styles/*.css $WORKSPACE/HPEThemeFiles/Package/dist/css
+# cp -p -r $WORKSPACE/dist/fonts $WORKSPACE/HPEThemeFiles/Package/dist
+# cp -p -r $WORKSPACE/dist/img $WORKSPACE/HPEThemeFiles/Package/dist
+# cp -p -r $WORKSPACE/HPEThemeFiles/ux-aspects-hpe-master/fonts $WORKSPACE/HPEThemeFiles/Package/dist
+# cp -p -r $WORKSPACE/HPEThemeFiles/ux-aspects-hpe-master/img $WORKSPACE/HPEThemeFiles/Package/dist
+# cp -p -r $WORKSPACE/HPEThemeFiles/ux-aspects-hpe-master/styles $WORKSPACE/HPEThemeFiles/Package/dist
+# cp -p -r $WORKSPACE/HPEThemeFiles/ux-aspects-hpe-master/bower.json $WORKSPACE/HPEThemeFiles/Package
+# cd $WORKSPACE/HPEThemeFiles/Package
+# tar czvf $HPEPackage dist bower.json
+# if [ "$?" -eq 0 ]
+# then
+    # echo "Package $HPEPackage was Successfully created"
+    # ls -la "$WORKSPACE/HPEThemeFiles/Package/$HPEPackage"
+# else
+    # echo "Error: Creating package $HPEPackage"
+# fi
 
-# Upload HPE-themed package to Artifactory
-if [ "$BuildPackages" == "true" ]; then
-	echo
-	echo Uploading HPE-themed package to Artifactory
-	cd $WORKSPACE
-	echo "curl -XPUT $PrivateArtifactoryURL/$HPEPackage -T $WORKSPACE/HPEThemeFiles/Package/$HPEPackage"
-	curl -u $PrivateArtifactoryCredentials -XPUT $PrivateArtifactoryURL/$HPEPackage -T $WORKSPACE/HPEThemeFiles/Package/$HPEPackage
-fi
+# # Upload HPE-themed package to Artifactory
+# if [ "$BuildPackages" == "true" ]; then
+	# echo
+	# echo Uploading HPE-themed package to Artifactory
+	# cd $WORKSPACE
+	# echo "curl -XPUT $PrivateArtifactoryURL/$HPEPackage -T $WORKSPACE/HPEThemeFiles/Package/$HPEPackage"
+	# curl -u $PrivateArtifactoryCredentials -XPUT $PrivateArtifactoryURL/$HPEPackage -T $WORKSPACE/HPEThemeFiles/Package/$HPEPackage
+# fi
 
 # Remove the HPE theme files
 echo
@@ -381,7 +393,7 @@ if [ "$BuildDocumentation" == "true" ]; then
 	cd $WORKSPACE
 	mkdir gh-pages-clone
 	cd gh-pages-clone
-	git clone -b gh-pages --single-branch git@github.com:UXAspects/UXAspects.git
+	git clone -b gh-pages --single-branch git@github.com:PearseMcMurray/UXAspects.git
 	cd UXAspects
 	git checkout -b $NextVersion-gh-pages-test
 	git push origin $NextVersion-gh-pages-test
@@ -413,7 +425,7 @@ if [ "$BuildDocumentation" == "true" ]; then
 	git push origin $NextVersion-gh-pages-test
 fi
 
-if [ "$BuildPackages" == "true" ]; then
+#if [ "$BuildPackages" == "true" ]; then
 	# Create a branch for the new Keppel Bower package. First, clone the repository to a sub-folder.
 	# Switching to the new branch and commiting to it will be performed in this clone.
 	echo
@@ -421,7 +433,7 @@ if [ "$BuildPackages" == "true" ]; then
 	cd $WORKSPACE
 	mkdir package-clone
 	cd package-clone
-	git clone -b bower --single-branch git@github.com:UXAspects/UXAspects.git
+	git clone -b bower --single-branch git@github.com:PearseMcMurray/UXAspects.git
 	cd UXAspects
 	git checkout -b $NextVersion-package-test
 	git push origin $NextVersion-package-test
@@ -438,7 +450,7 @@ if [ "$BuildPackages" == "true" ]; then
 	git add dist/ bower.json
 	git commit -m "Committing changes for package $NextVersion-test. Latest commit ID is $latestCommitID."
 	git push --set-upstream origin $NextVersion-package-test
-fi
+#fi
 
 # Return to the develop branch and discard changes to a couple of files
 echo
@@ -446,5 +458,56 @@ echo Returning to the develop branch
 cd $WORKSPACE
 git checkout docs/app/data/footer-navigation.json
 git checkout docs/app/data/landing-page.json
+
+#if [ "$BuildPackages" == "true" ]; then
+	# Create the NPM package
+	echo
+	echo Creating the NPM package
+	if [ -d "$WORKSPACE/npm" ]; then
+		echo "Folder $WORKSPACE/npm exists... deleting it!"
+		rm -rf $WORKSPACE/npm
+	fi
+	mkdir -p $WORKSPACE/npm
+	cd $WORKSPACE/npm
+	cp -p -r $WORKSPACE/src/package.json .
+	cp -p -r $WORKSPACE/dist .
+	
+	# Copy the package to a folder on the Grid Hub machine.
+	cd $WORKSPACE
+	echo Deleting old copy of NPM package on Selenium Grid Hub machine
+	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf $REMOTE_NPM_PACKAGE_FOLDER
+
+	echo Copying NPM package to the Selenium Grid Hub machine
+	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p REMOTE_NPM_PACKAGE_FOLDER
+	scp -r $WORKSPACE/npm/* $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_NPM_PACKAGE_FOLDER
+
+	# Loop while waiting for the $NextVersion-package-test branch to be merged into the Bower
+	# branch or deleted. Merging signals that the release is verified and so the NPM package may
+	# be published.
+    branchCheckDelay=30    
+    while :
+    do
+        branchExists=`git ls-remote --heads https://github.com/PearseMcMurray/UXAspects.git $NextVersion-package-test | wc -l`
+        if [ $branchExists == 0 ] ; then
+		    latestBowerCommitID=`git rev-parse origin/bower`
+			echo latestBowerCommitID is $latestBowerCommitID
+			latestBowerCommitMessage=`git log --format=%s%b -n 1 $latestBowerCommitID`
+			echo latestBowerCommitMessage is $latestBowerCommitMessage
+			branchMerged=`echo "$latestBowerCommitMessage" | grep "$NextVersion-package-test" | wc -l`
+            # if this contains $NextVersion-package-test and $latestCommitID, the branch was merged
+            if [ $branchMerged == 1 ] ; then
+                echo Branch $NextVersion-package-test has been merged into the Bower branch. Publish the NPM package.
+				echo -e "$NPMUserName\n$NPMUserPassword\n$NPMUserEmailAddress\n" | npm login
+				#npm publish				
+			else
+                echo Branch $NextVersion-package-test was not merged into the Bower branch.
+            fi
+			break;
+        fi
+        
+        echo Branch $NextVersion-package-test still exists. Sleeping for $branchCheckDelay seconds
+        sleep $branchCheckDelay
+    done
+#fi
 
 exit 0
