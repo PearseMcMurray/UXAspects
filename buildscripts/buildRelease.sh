@@ -274,12 +274,12 @@ sed -i -e s/"\"version\": \"Currently v*[0-9]\.[0-9]\.[0-9].*\","/"\"version\": 
 "/ "docs/app/data/landing-page.json"
 
 # Take a copy of the files which will be overwritten by the HPE theme files
-echo
-echo Storing the Keppel theme files
-mkdir $WORKSPACE/KeppelThemeFiles
-cp -p -r $WORKSPACE/src/fonts $WORKSPACE/KeppelThemeFiles
-cp -p -r $WORKSPACE/src/img $WORKSPACE/KeppelThemeFiles
-cp -p -r $WORKSPACE/src/styles $WORKSPACE/KeppelThemeFiles
+# echo
+# echo Storing the Keppel theme files
+# mkdir $WORKSPACE/KeppelThemeFiles
+# cp -p -r $WORKSPACE/src/fonts $WORKSPACE/KeppelThemeFiles
+# cp -p -r $WORKSPACE/src/img $WORKSPACE/KeppelThemeFiles
+# cp -p -r $WORKSPACE/src/styles $WORKSPACE/KeppelThemeFiles
 
 # # Get the HPE theme files and copy them onto the source hierarchy
 # echo
@@ -308,7 +308,7 @@ cp -p -r $WORKSPACE/src/styles $WORKSPACE/KeppelThemeFiles
 # echo Building using the HPE theme
 # cd $WORKSPACE
 # echo Run npm install
-docker_image_run npm install
+# docker_image_run npm install
 # echo Building
 # docker_image_run grunt clean
 # docker_image_run grunt build --force
@@ -355,26 +355,26 @@ docker_image_run npm install
 	# curl -u $PrivateArtifactoryCredentials -XPUT $PrivateArtifactoryURL/$HPEPackage -T $WORKSPACE/HPEThemeFiles/Package/$HPEPackage
 # fi
 
-# Remove the HPE theme files
-echo
-echo Deleting the HPE theme files
-cd $WORKSPACE
-rm -rf $WORKSPACE/src/fonts
-rm -rf $WORKSPACE/src/img
-rm -rf $WORKSPACE/src/styles
+# # Remove the HPE theme files
+# echo
+# echo Deleting the HPE theme files
+# cd $WORKSPACE
+# rm -rf $WORKSPACE/src/fonts
+# rm -rf $WORKSPACE/src/img
+# rm -rf $WORKSPACE/src/styles
 
-# Copy back the Keppel theme files
-echo
-echo Restoring the Keppel theme files
-cp -p -r $WORKSPACE/KeppelThemeFiles/* $WORKSPACE/src
+# # Copy back the Keppel theme files
+# echo
+# echo Restoring the Keppel theme files
+# cp -p -r $WORKSPACE/KeppelThemeFiles/* $WORKSPACE/src
 
-# Build using the Keppel theme
-echo
-echo Building using the Keppel theme
-cd $WORKSPACE
-docker_image_run grunt clean
-rm -rf dist
-docker_image_run grunt build --force
+# # Build using the Keppel theme
+# echo
+# echo Building using the Keppel theme
+# cd $WORKSPACE
+# docker_image_run grunt clean
+# rm -rf dist
+# docker_image_run grunt build --force
 
 # Archive the Keppel-themed documentation files
 if [ "$BuildDocumentation" == "true" ]; then
@@ -431,6 +431,10 @@ fi
 	echo
 	echo Creating the branch $NextVersion-package-test
 	cd $WORKSPACE
+	
+	rm -rf package-clone
+	
+	
 	mkdir package-clone
 	cd package-clone
 	git clone -b bower --single-branch git@github.com:PearseMcMurray/UXAspects.git
