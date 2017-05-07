@@ -16,12 +16,12 @@ echo http_proxy is $http_proxy
 echo https_proxy is $https_proxy
 echo BuildPackages is $BuildPackages
 echo PrivateArtifactoryURL is $PrivateArtifactoryURL
-echo PrivateArtifactoryCredentials is $PrivateArtifactoryCredentials
 echo BuildDocumentation is $BuildDocumentation
 echo GridHubIPAddress is $GridHubIPAddress
 echo Build number is $BUILD_NUMBER
 echo Build image is $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST
 echo SSH logon is $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress
+echo REMOTE_FOLDER is $REMOTE_FOLDER
 echo UID is $UID
 echo GROUPS is $GROUPS
 echo USER is $USER
@@ -103,66 +103,65 @@ echo "<h2>" >> UXAspectsTestsResults.html
 date -u >> UXAspectsTestsResults.html
 echo "</h2></br>" >> UXAspectsTestsResults.html
 
-# if [ "$RunTests" == "true" ]; then
-	# # The repository will have been synced to the build slave. Copy it to the UXAspectsTestsReleaseBuild
-	# # folder on the Selenium Grid Hub machine.
-	# cd $WORKSPACE
-	# echo Deleting old copy of repository on Selenium Grid Hub machine
-	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf $REMOTE_FOLDER
+if [ "$RunTests" == "true" ]; then
+	# The repository will have been synced to the build slave. Copy it to the UXAspectsTestsReleaseBuild
+	# folder on the Selenium Grid Hub machine.
+	cd $WORKSPACE
+	echo Deleting old copy of repository on Selenium Grid Hub machine
+	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf $REMOTE_FOLDER
 
-	# echo Copying repository to the Selenium Grid Hub machine
-	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p $REMOTE_FOLDER/ux-aspects
-	# scp -r . $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_FOLDER/ux-aspects
-# fi
+	echo Copying repository to the Selenium Grid Hub machine
+	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p $REMOTE_FOLDER/ux-aspects
+	scp -r . $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_FOLDER/ux-aspects
+fi
 
 # Create the latest ux-aspects-build image if it does not exist
 docker_image_build; echo
 
 if [ "$RunTests" == "true" ]; then
-	# echo Executing the unit tests in the $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST container
-	# cd $WORKSPACE
-	# chmod a+rw .
-	# docker_image_run bash buildscripts/executeUnitTestsDocker.sh
+	echo Executing the unit tests in the $UX_ASPECTS_BUILD_IMAGE_NAME:$UX_ASPECTS_BUILD_IMAGE_TAG_LATEST container
+	cd $WORKSPACE
+	chmod a+rw .
+	docker_image_run bash buildscripts/executeUnitTestsDocker.sh
 
-	# # The unit tests results file, UnitTestResults.txt, should have been created in this folder. Copy it to our results file and
-	# # remove unwanted strings.
-	# echo Adding unit test results to the results file
-	# echo "<h2>Unit Tests</h2>" >> UXAspectsTestsResults.html
-	# while read line ; do
-		# echo "<p><span class=rvts6>$line</span></p>" >> UXAspectsTestsResults.html
-	# done < UnitTestResults.txt
-	# sed -i 's/\[1m//g' UXAspectsTestsResults.html
-	# sed -i 's/\[4m//g' UXAspectsTestsResults.html
-	# sed -i 's/\[22m//g' UXAspectsTestsResults.html
-	# sed -i 's/\[24m//g' UXAspectsTestsResults.html
-	# sed -i 's/\[31m//g' UXAspectsTestsResults.html
-	# sed -i 's/\[32m//g' UXAspectsTestsResults.html
-	# sed -i 's/\[33m//g' UXAspectsTestsResults.html
-	# sed -i 's/\[39m//g' UXAspectsTestsResults.html
-	# sed -i 's/\r\n/\n/g' UXAspectsTestsResults.html
+	# The unit tests results file, UnitTestResults.txt, should have been created in this folder. Copy it to our results file and
+	# ignore unwanted strings.
+	echo Adding unit test results to the results file
+	startOutput=false
+	echo "<h2>Unit Tests</h2>" >> UXAspectsTestsResults.html
+	while read line ; do
+		# Ignore all lines before Testing Jasmine specs via PhantomJS
+		if [[ $line == *"Testing Jasmine specs via PhantomJS"* ]] ; then
+			echo "Found first line to output"
+			startOutput=true
+		fi
+		
+		if [ "$startOutput" = true ] ; then
+			echo "<p><span class=rvts6>$line</span></p>" >> UXAspectsTestsResults.html
+		fi
+	done < UnitTestResults.txt
 
-	# # Test for success i.e. zero failures. If there were failures, complete the results file and exit with status 1.
-	# if grep -q  ">> 0 failures" UnitTestResults.txt;
-	# then
-		# echo Unit tests passed
-	# else
-		# echo "Unit test(s) failed"
-		# echo "</body></html>" >> UXAspectsTestsResults.html
-		# cp UXAspectsTestsResults.html $WORKSPACE/index-${BUILD_NUMBER}.html
-		# cp UXAspectsTestsResults.html $WORKSPACE/index.html
-		# mkdir -p $WORKSPACE/reports
-		# cp index.html $WORKSPACE/reports/index.html
-		# exit 1
-	# fi
+	# Test for success i.e. zero failures. If there were failures, complete the results file and exit with status 1.
+	if grep -q  ">> 0 failures" UnitTestResults.txt;
+	then
+		echo Unit tests passed
+	else
+		echo "Unit test(s) failed"
+		echo "</body></html>" >> UXAspectsTestsResults.html
+		cp UXAspectsTestsResults.html $WORKSPACE/index-${BUILD_NUMBER}.html
+		cp UXAspectsTestsResults.html $WORKSPACE/index.html
+		mkdir -p $WORKSPACE/reports
+		cp index.html $WORKSPACE/reports/index.html
+		exit 1
+	fi
 
 	# Execute the Selenium tests on the remote machine
 	echo
 	echo Executing the Selenium tests
 	cd $WORKSPACE
-	# rm -rf emailable-report.html
-	# rm -rf testng-results.xml
+	rm -f emailable-report.html testng-results.xml index.html
 	
-	# ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress bash $REMOTE_FOLDER/ux-aspects/buildscripts/executeSeleniumTestsReleaseBuild.sh
+	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress bash $REMOTE_FOLDER/ux-aspects/buildscripts/executeSeleniumTestsReleaseBuild.sh
 	# Copy two results files, one HTML and one XML, created on the remote machine
 	scp $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_FOLDER/ux-aspects/target/surefire-reports/emailable-report.html .
 	scp $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_FOLDER/ux-aspects/target/surefire-reports/testng-results.xml .
@@ -220,16 +219,6 @@ if [ "$BuildPackages" != "true" ] && [ "$BuildDocumentation" != "true" ]; then
 	echo "Nothing to build - exiting"
 	exit 0;
 fi
-
-
-
-
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-echo "Exiting early!"
-exit 0;
-
-
-
 
 # Perform the build
 echo Both sets of tests passed. Performing the build.
