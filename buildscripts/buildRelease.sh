@@ -475,11 +475,11 @@ git checkout docs/app/data/landing-page.json
 	# Copy the package to a folder on the Grid Hub machine.
 	cd $WORKSPACE
 	echo Deleting old copy of NPM package on Selenium Grid Hub machine
-	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf $REMOTE_NPM_PACKAGE_FOLDER
+	#ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress rm -rf $REMOTE_NPM_PACKAGE_FOLDER
 
 	echo Copying NPM package to the Selenium Grid Hub machine
-	ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p REMOTE_NPM_PACKAGE_FOLDER
-	scp -r $WORKSPACE/npm/* $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_NPM_PACKAGE_FOLDER
+	#ssh $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress mkdir -p REMOTE_NPM_PACKAGE_FOLDER
+	#scp -r $WORKSPACE/npm/* $SELENIUM_TEST_MACHINE_USER@$GridHubIPAddress:$REMOTE_NPM_PACKAGE_FOLDER
 
 	# Loop while waiting for the $NextVersion-package-test branch to be merged into the Bower
 	# branch or deleted. Merging signals that the release is verified and so the NPM package may
