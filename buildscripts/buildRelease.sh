@@ -224,7 +224,7 @@ fi
 # Perform the build
 echo Both sets of tests passed. Performing the build.
 cd $WORKSPACE
-cp /home/jenkins/.bowerrc .
+#cp /home/jenkins/.bowerrc .
 
 # Remove remnants of tests
 rm -rf emailable-report.html
